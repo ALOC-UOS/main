@@ -1,24 +1,54 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from './views/Home';
+import Problem from './views/Problem';
+import Member from './views/Member';
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const themeObject = {
+    light: {
+      mode: 'light',
+      background: '#e5e6ec',
+      foreground: '#f0f1f5',
+      titleText: '#3c414c',
+      contentText: '#5c5e66',
+      subText: '#a9adb9',
+      primary: '#408cff',
+      secondary: '#98bffa',
+      boxShadow: '0 4px 24px 0 #cecece',
+    },
+    dark: {
+      mode: 'dark',
+      background: '#1d2128',
+      foreground: '#2c3038',
+      titleText: '#a0a4b3',
+      contentText: '#b4b7c4',
+      subText: '#5d616f',
+      primary: '#408cff',
+      secondary: '#98bffa',
+      boxShadow: '0 4px 24px 0 #3c414c',
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themeObject[theme]}>
+      <Router basename={process.env.PUBLIC_URL}> 
+        <Routes>
+          <Route>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/problem" element={<Problem />} />
+            <Route path="/member" element={<Member />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
