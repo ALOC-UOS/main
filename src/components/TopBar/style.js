@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const TopBarContainer = styled('div')`
+  z-index: 100;
   position: fixed;
   top: 16px;
   left: 0;
@@ -21,6 +22,7 @@ const TopBarContainer = styled('div')`
     top: 0;
     margin: 0;
     padding: 24px 64px;
+    border-radius: 0px;
   `}
 `;
 

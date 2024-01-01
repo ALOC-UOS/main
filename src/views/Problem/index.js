@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemCorrect, ProblemCorrectNum, ProblemButton } from './style';
 import TopBar from '../../components/TopBar';
 

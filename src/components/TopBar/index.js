@@ -23,7 +23,13 @@ const TopBar = () => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    setSelectedItem(path);
+    if( path === '/test/' || path === '/test') {
+      setSelectedItem('/');
+    } else if (path === '/test/problem/' || path === '/test/problem') {
+      setSelectedItem('/problem');
+    } else if (path === '/test/member/' || path === '/test/member') {
+      setSelectedItem('/member');
+    }
   }, []);
 
   useEffect(() => {

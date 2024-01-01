@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
 import {
     BrowserRouter as Router,
     Routes,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import Home from './views/Home';
 import Problem from './views/Problem';
 import Member from './views/Member';
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const theme = 'light';
   const themeObject = {
     light: {
       mode: 'light',

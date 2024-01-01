@@ -86,6 +86,7 @@ const ProblemName = styled.div`
   font-size: 40px;
   font-weight: 500;
   flex-grow: 1;
+  text-align: center;
 `
 
 const ProblemButton = styled.div`
