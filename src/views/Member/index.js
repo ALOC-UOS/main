@@ -1,57 +1,53 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem } from './style';
 import TopBar from '../../components/TopBar';
 
-const MemberDataList = [
-  {
-    githubId: 'Dodolist',
-    id: 43953794,
-    name: '이종우',
-    class: 20,
-    date: '2024.01.01',
-    solved: 24,
-    unsolved: 5,
-  },
-  {
-    githubId: 'SuperStarKang',
-    id: 124661981,
-    name: '이강민',
-    class: 20,
-    date: '2024.01.01',
-    solved: 19,
-    unsolved: 4,
-  }
-]
-
 
 const Member = () => {
+  const [MemberData, setMemberData] = useState([]);
+
+  useEffect(() => {
+    loadMemberData();
+  }, []);
+
+  function loadMemberData() {
+    let url = 'https://www.iflab.run/api/show/user';
+    axios.get(url)
+      .then(response => {
+        setMemberData(response.data);
+      })
+      .catch(error => {
+        console.error('API 요청 중 오류 발생:');
+      });
+  }
   return (
     <MemberContainer>
       <TopBar />
       <ContentContainer>
-        {MemberDataList.map((member, index) => (
+        {MemberData.map((member, index) => (
           <ProfileWrapper delay={index * 0.25}>
             <ProfileBackgroundImage>
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
-                <ProfileImage src={`https://avatars.githubusercontent.com/u/${member.id}?v=4`} />
+                <ProfileImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />
               </ProfileLink>
             </ProfileBackgroundImage>
             <MemberWrapper>
-            <MemberName>{member.name}</MemberName>
+            <MemberName>{member.username}</MemberName>
             <MemberUserInfoWrapper>
-              <MemberUserInfoText>{member.class}학번</MemberUserInfoText>
+              <MemberUserInfoText>{member.studentId}학번</MemberUserInfoText>
               <MemberUserInfoBar />
-              <MemberUserInfoText>{member.date}</MemberUserInfoText>
+              <MemberUserInfoText>{member.joinedAt}</MemberUserInfoText>
             </MemberUserInfoWrapper>
             <MemberBar />
             <MemberInfoWrapper>
               <MemberInfoRow>
                 <MemberInfoItem>해결한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>{member.solved}개</MemberInfoItem>
+                <MemberInfoItem blue={true}>0개</MemberInfoItem>
               </MemberInfoRow>
               <MemberInfoRow>
                 <MemberInfoItem>해결하지 못한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>{member.unsolved}개</MemberInfoItem>
+                <MemberInfoItem blue={true}>0개</MemberInfoItem>
               </MemberInfoRow>
             </MemberInfoWrapper>
           </MemberWrapper>
