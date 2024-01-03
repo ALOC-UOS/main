@@ -22,14 +22,14 @@ const ContentContainer = styled.div`
   position: fixed;
 
   top: 50%;
-  left: 40px;
+  left: 0px;
   right: 0px;
   transform: translateY(-50%);
 
   display: flex;
   flex-direction: row;
   gap: 40px;
-  padding: 24px 0;
+  padding: 24px 40px;
 
   overflow-x: scroll;
   &::-webkit-scrollbar {
