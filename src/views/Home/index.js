@@ -18,8 +18,7 @@ const Home = () => {
   };
 
   function loadProblem() {
-    let level = 10;
-    let url = 'https://www.iflab.run/api/problem/pick/' + level;
+    let url = 'https://www.iflab.run/api/show/problem/today';
     axios.get(url)
       .then(response => {
         setProblemData(response.data);
@@ -43,8 +42,8 @@ const Home = () => {
           <ProblemContainer>
             <ProblemWrapper>
               <ProblemTitle>오늘의 문제</ProblemTitle>
-              <ProblemName>{ProblemData.problemId}. {ProblemData.name}</ProblemName>
-              <ProblemButton onClick={moveProblemPage.bind(this, ProblemData.problemId)}>
+              <ProblemName>{ProblemData.id}. {ProblemData.title}</ProblemName>
+              <ProblemButton onClick={moveProblemPage.bind(this, ProblemData.id)}>
                 문제 확인하기
                 <img src={RightArrowIcon} alt="right-arrow-icon" />
               </ProblemButton>

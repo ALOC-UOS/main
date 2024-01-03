@@ -33,6 +33,24 @@ const AppearBackground = keyframes`
   }
 `
 
+const BrightenBackground = keyframes`
+  0% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  100% {
+    filter: brightness(0.8) hue-rotate(20deg);
+  }
+`
+
+const MoveArrow = keyframes`
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(8px);
+  }
+`
+
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -96,7 +114,7 @@ const ProblemButton = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 20px 12px 20px 16px;
+  padding: 20px 16px;
   min-width: 120px;
   border-radius: 12px;
   background-color: ${(props) => props.theme.primary};
@@ -115,10 +133,14 @@ const ProblemButton = styled.div`
     filter: brightness(0.8);
     transform: scale(0.95);
   }
+  & > img {
+    animation: ${MoveArrow} 1s ease-in-out infinite alternate;
+  }
 `
 
 const BackgroundImage = styled.img`
-  animation: ${AppearBackground} 1s ease-in-out;
+  animation: ${AppearBackground} 1s ease-in-out,
+            ${BrightenBackground} 3s 1s ease-in-out alternate infinite;
   position: absolute;
   top: 0;
   left: 0;
