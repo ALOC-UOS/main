@@ -1,7 +1,16 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem } from './style';
+import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem } from './style';
 import TopBar from '../../components/TopBar';
+import Bronze from '../../assets/bronze.svg';
+import Silver from '../../assets/silver.svg';
+import Gold from '../../assets/gold.svg';
+import Platinum from '../../assets/platinum.svg';
+import Number5 from '../../assets/number-5.svg';
+import Number4 from '../../assets/number-4.svg';
+import Number3 from '../../assets/number-3.svg';
+import Number2 from '../../assets/number-2.svg';
+import Number1 from '../../assets/number-1.svg';
 
 
 const Member = () => {
@@ -16,6 +25,7 @@ const Member = () => {
     axios.get(url)
       .then(response => {
         setMemberData(response.data);
+        console.log(response.data);
       })
       .catch(error => {
         console.error('API 요청 중 오류 발생:');
@@ -31,6 +41,10 @@ const Member = () => {
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
                 <ProfileImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />
               </ProfileLink>
+              <ProfileRankWrap href={`https://solved.ac/${member.baekjoonId}`} target="_blank">
+                <ProfileRank src={parseInt(member.rank / 10) === 1 ? Bronze : parseInt(member.rank / 10) === 2 ? Silver : parseInt(member.rank / 10) === 3 ? Gold : Platinum} />
+                <ProfileNumber src={member.rank % 10 === 1 ? Number1 : member.rank % 10 === 2 ? Number2 : member.rank % 10 === 3 ? Number3 : member.rank % 10 === 4 ? Number4 : Number5} />
+              </ProfileRankWrap>
             </ProfileBackgroundImage>
             <MemberWrapper>
             <MemberName>{member.username}</MemberName>

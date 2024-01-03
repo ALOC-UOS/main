@@ -97,6 +97,47 @@ const ProfileImage = styled.img`
   width: 100%;
   height: 100%;
 `
+const ProfileRankWrap = styled.a`
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  width: 56px;
+  height: 72px;
+
+  &:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      position: absolute;
+      opacity: 1;
+    }
+    & > img {
+      filter: brightness(0.5);
+    }
+  }
+  &:active {
+    & > img {
+      filter: brightness(0.3);
+    }
+  }
+`
+
+const ProfileRank = styled.img`
+  width: 56px;
+  height: 72px;
+`
+
+const ProfileNumber = styled.img`
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%);
+  opacity: 0.8;
+`
 
 const MemberWrapper = styled.div`
   background-color: #ffffff;
@@ -162,4 +203,4 @@ const MemberInfoItem = styled.div`
 `
 
 
-export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem };
+export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem };
