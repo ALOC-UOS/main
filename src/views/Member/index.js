@@ -32,7 +32,7 @@ const Member = () => {
   }
   return (
     <MemberContainer>
-      <TopBar />
+      <TopBar active={true} />
       <ContentContainer>
         {MemberData.map((member, index) => (
           <ProfileWrapper delay={index * 0.25}>

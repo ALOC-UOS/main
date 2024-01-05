@@ -9,6 +9,7 @@ const TopBarContainer = styled('div')`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 
   padding: 16px 24px;
   margin: 0 40px;
@@ -16,7 +17,6 @@ const TopBarContainer = styled('div')`
   background-color: ${(props) => props.theme.foreground}a0;
   backdrop-filter: blur(16px);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
-  gap: 40px;
 
   ${(props) => props.isScroll && css`
     top: 0;
@@ -25,6 +25,12 @@ const TopBarContainer = styled('div')`
     border-radius: 0px;
   `}
 `;
+
+const TopBarLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+`
 
 const TopBarItem = styled.div`
   font-size: 16px;
@@ -43,4 +49,32 @@ const TopBarItem = styled.div`
   `}
 `
 
-export { TopBarContainer, TopBarItem };
+const TopBarButton = styled.div`
+  padding: 12px;
+  border-radius: 12px;
+  background-color: ${(props) => props.theme.primary};
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+  &:active {
+    transition: all 0.05s;
+    filter: brightness(0.8);
+    transform: scale(0.95);
+  }
+  
+  ${(props) => props.active && css`
+    opacity: 1;
+    pointer-events: auto;
+  `}
+` 
+
+export { TopBarContainer, TopBarLeft, TopBarItem, TopBarButton };
