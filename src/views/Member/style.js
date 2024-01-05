@@ -52,7 +52,12 @@ const ProfileWrapper = styled.div`
 const ProfileBackgroundImage = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.foreground};
-  height: 104px;
+  height: 120px;
+
+  ${(props) => props.solved && css`
+    background-color: ${(props) => props.theme.primary};
+  `}
+
 `
 
 const ProfileLink = styled.a`
