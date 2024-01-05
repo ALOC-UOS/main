@@ -25,7 +25,6 @@ const Member = () => {
     axios.get(url)
       .then(response => {
         setMemberData(response.data);
-        console.log(response.data);
       })
       .catch(error => {
         console.error('API 요청 중 오류 발생:');
