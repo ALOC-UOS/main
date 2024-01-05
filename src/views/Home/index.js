@@ -55,7 +55,7 @@ const Home = () => {
               <ProblemTags>
                 {ProblemTagData.map((tag) => (
                   <ProblemTag>
-                    <ProblemTagText>{tag.korean}</ProblemTagText>
+                    <ProblemTagText># {tag.korean}</ProblemTagText>
                     <ProblemTagText>{tag.english}</ProblemTagText>
                   </ProblemTag>
                 ))}

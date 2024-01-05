@@ -175,15 +175,14 @@ const ProblemTags = styled.div`
 
 const ProblemTag = styled.div`
   display: flex;
-  border: 1px solid ${(props) => props.theme.secondary};
-  border-radius: 12px;
+  border-bottom: 1px solid ${(props) => props.theme.secondary}80;
   padding: 4px 12px;
   gap: 4px;
 `
 
 const ProblemTagText = styled.div`
   color: ${(props) => props.theme.secondary};
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
 `
 
