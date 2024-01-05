@@ -86,11 +86,14 @@ const ProblemWrapper = styled.div`
   padding: 64px 0 40px;
 `
 
-const ProblemTitle = styled.div`
+const ProblemTitleWrapper = styled.div`
   animation: ${MoveDown} 1s ease-in-out;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
   border: 1px solid #ffffff;
   border-radius: 24px;
   padding: 8px 16px;
@@ -98,13 +101,25 @@ const ProblemTitle = styled.div`
   flex-shrink: 0;
 `
 
+const ProblemTitle = styled.div`
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+`
+
+const ProblemDifficulty = styled.img`
+  width: 24px;
+  height: 24px;
+`
+
 const ProblemName = styled.div`
   animation: ${MoveDown} 1s ease-in-out;
   color: #ffffff;
   font-size: 40px;
   font-weight: 500;
-  flex-grow: 1;
+  flex-shrink: 0;
   text-align: center;
+  margin-bottom: 8px;
 `
 
 const ProblemButton = styled.div`
@@ -149,4 +164,27 @@ const BackgroundImage = styled.img`
   object-fit: cover;
 `
 
-export { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, ProblemTitle, ProblemName, ProblemButton, BackgroundImage};
+const ProblemTags = styled.div`
+  animation: ${MoveDown} 1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 12px;
+`
+
+const ProblemTag = styled.div`
+  display: flex;
+  border: 1px solid ${(props) => props.theme.secondary};
+  border-radius: 12px;
+  padding: 4px 12px;
+  gap: 4px;
+`
+
+const ProblemTagText = styled.div`
+  color: ${(props) => props.theme.secondary};
+  font-size: 12px;
+  font-weight: 500;
+`
+
+export { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, ProblemTitleWrapper, ProblemTitle, ProblemDifficulty, ProblemName, ProblemButton, BackgroundImage, ProblemTags, ProblemTag, ProblemTagText };
