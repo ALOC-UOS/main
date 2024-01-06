@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemButton } from './style';
+import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemRightWrap, ProblemButton } from './style';
 import TopBar from '../../components/TopBar';
 import Bronze from '../../assets/bronze-small.svg';
 import Silver from '../../assets/silver-small.svg';
@@ -52,14 +52,16 @@ const Problem = () => {
                       </ProblemTag>
                     ))}
                   </ProblemTags>
+                </ProblemInfoWrap>
+                <ProblemRightWrap>
                   <ProblemCorrect>
                     맞힌사람
                     <ProblemCorrectNum> {ProblemData[0].solved}명</ProblemCorrectNum>
                   </ProblemCorrect>
-                </ProblemInfoWrap>
-                <ProblemButton onClick={() => moveProblemPage(ProblemData[0].id)}>
-                  문제 확인하기
-                </ProblemButton>
+                  <ProblemButton onClick={() => moveProblemPage(ProblemData[0].id)}>
+                    문제 확인하기
+                  </ProblemButton>
+                </ProblemRightWrap>
               </ProblemItem>
             )}
           </ProblemList>
@@ -82,14 +84,16 @@ const Problem = () => {
                       </ProblemTag>
                     ))}
                   </ProblemTags>
+                </ProblemInfoWrap>
+                <ProblemRightWrap>
                   <ProblemCorrect>
                     맞힌사람
                     <ProblemCorrectNum> {problem.solved}명</ProblemCorrectNum>
                   </ProblemCorrect>
-                </ProblemInfoWrap>
-                <ProblemButton onClick={() => moveProblemPage(problem.id)}>
-                  문제 확인하기
-                </ProblemButton>
+                  <ProblemButton onClick={() => moveProblemPage(problem.id)}>
+                    문제 확인하기
+                  </ProblemButton>
+                </ProblemRightWrap>
               </ProblemItem>
             ))}
           </ProblemList>

@@ -107,6 +107,11 @@ const ProblemCorrect = styled.div`
 
 const ProblemCorrectNum = styled.div`
   color: ${(props) => props.theme.primary};
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const ProblemButton = styled.div`
@@ -134,4 +139,11 @@ const ProblemButton = styled.div`
   }
 `
 
-export { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemButton };
+const ProblemRightWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+`
+
+export { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemRightWrap, ProblemButton };
