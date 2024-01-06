@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 const ListModalContainer = styled.div`
   min-width: 400px;
+  min-height: 480px;
   z-index: 300;
   position: fixed;
   top: 50%;
@@ -12,14 +13,14 @@ const ListModalContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.foreground};
-  padding: 40px 16px;
+  padding: 16px;
   border-radius: 16px;
   filter: blur(12px);
   pointer-events: none;
 
   ${(props) => props.isOpen && css`
     min-width: 320px;
-    padding: 16px;
+    min-height: 400px;
     opacity: 1;
     filter: blur(0px);
     pointer-events: auto;

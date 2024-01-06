@@ -80,7 +80,7 @@ const Problem = () => {
                 </ProblemInfoWrap>
                 <ProblemRightWrap>
                   <ProblemCorrect onClick={() => openSolvedUserList(ProblemData[0].id)}>
-                    맞힌사람
+                    맞힌 사람
                     <ProblemCorrectNum> {ProblemData[0].solved}명</ProblemCorrectNum>
                   </ProblemCorrect>
                   <ProblemButton onClick={() => moveProblemPage(ProblemData[0].id)}>
@@ -112,7 +112,7 @@ const Problem = () => {
                 </ProblemInfoWrap>
                 <ProblemRightWrap>
                   <ProblemCorrect onClick={() => openSolvedUserList(problem.id)}>
-                    맞힌사람
+                    맞힌 사람
                     <ProblemCorrectNum> {problem.solved}명</ProblemCorrectNum>
                   </ProblemCorrect>
                   <ProblemButton onClick={() => moveProblemPage(problem.id)}>
