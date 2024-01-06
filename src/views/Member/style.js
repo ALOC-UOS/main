@@ -11,6 +11,18 @@ const AppearProfile = keyframes`
   }
 `
 
+const MoveBackground = keyframes`
+  0% {
+    background-position: 0px;
+  }
+  65% {
+    background-position: 300px;
+  }
+  100% {
+    background-position: 280px;
+  }
+`
+
 const MemberContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -207,5 +219,19 @@ const MemberInfoItem = styled.div`
   `}
 `
 
+const SolvedAnimation = styled.div`
+  animation: ${MoveBackground} 3s ease forwards infinite;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, transparent 20%, #ffffff80 20%, #ffffff80 35%,transparent 35%, transparent 40%, #ffffff40 40%, #ffffff40 45%,transparent 45%,transparent);
+  opacity: 0;
 
-export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem };
+  ${(props) => props.solved && css`
+    opacity: 1;
+  `}
+`
+
+export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation };

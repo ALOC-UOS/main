@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem } from './style';
+import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation } from './style';
 import TopBar from '../../components/TopBar';
 import Bronze from '../../assets/bronze.svg';
 import Silver from '../../assets/silver.svg';
@@ -37,6 +37,7 @@ const Member = () => {
         {MemberData.map((member, index) => (
           <ProfileWrapper delay={index * 0.25}>
             <ProfileBackgroundImage solved={member.todaySolved}>
+              <SolvedAnimation solved={member.todaySolved} />
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
                 <ProfileImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />
               </ProfileLink>
