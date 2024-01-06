@@ -70,8 +70,8 @@ const Problem = () => {
                     {ProblemData[0].id}. {ProblemData[0].title}
                   </ProblemName>
                   <ProblemTags>
-                    {JSON.parse(ProblemData[0].tags).map((tag) => (
-                      <ProblemTag>
+                    {JSON.parse(ProblemData[0].tags).map((tag, index) => (
+                      <ProblemTag key={index}>
                         <ProblemTagText>{tag.korean}</ProblemTagText>
                         <ProblemTagText>{tag.english}</ProblemTagText>
                       </ProblemTag>
@@ -102,8 +102,8 @@ const Problem = () => {
                     {problem.id}. {problem.title}
                   </ProblemName>
                   <ProblemTags>
-                    {JSON.parse(problem.tags).map((tag) => (
-                      <ProblemTag>
+                    {JSON.parse(problem.tags).map((tag, index) => (
+                      <ProblemTag key={index}>
                         <ProblemTagText>{tag.korean}</ProblemTagText>
                         <ProblemTagText>{tag.english}</ProblemTagText>
                       </ProblemTag>

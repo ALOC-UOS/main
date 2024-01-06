@@ -53,8 +53,8 @@ const Home = () => {
               </ProblemTitleWrapper>
               <ProblemName>{ProblemData.id}. {ProblemData.title}</ProblemName>
               <ProblemTags>
-                {ProblemTagData.map((tag) => (
-                  <ProblemTag>
+                {ProblemTagData.map((tag, index) => (
+                  <ProblemTag key={index}>
                     <ProblemTagText># {tag.korean}</ProblemTagText>
                     <ProblemTagText>{tag.english}</ProblemTagText>
                   </ProblemTag>
