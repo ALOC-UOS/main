@@ -216,6 +216,10 @@ const MemberInfoItem = styled.div`
 
   ${(props) => props.blue && css`
     color: ${(props) => props.theme.primary};
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   `}
 `
 

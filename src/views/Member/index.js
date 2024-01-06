@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation } from './style';
 import TopBar from '../../components/TopBar';
+import ListModal from '../../components/ListModal';
+import BlackScreen from '../../components/BlackScreen';
 import Bronze from '../../assets/bronze.svg';
 import Silver from '../../assets/silver.svg';
 import Gold from '../../assets/gold.svg';
@@ -15,6 +17,9 @@ import Number1 from '../../assets/number-1.svg';
 
 const Member = () => {
   const [MemberData, setMemberData] = useState([]);
+  const [ProblemListData, setProblemListData] = useState([]);
+  const [isOpenedModal, setIsOpenedModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
 
   useEffect(() => {
     loadMemberData();
@@ -30,9 +35,41 @@ const Member = () => {
         console.error('API 요청 중 오류 발생:');
       });
   }
+
+  function openProblemListModal(type, githubId) {
+    let url = '';
+
+    if (type === 'solved') {
+      url = `https://www.iflab.run/api/show/user/solved-problem/${githubId}`;
+      setModalTitle('해결한 문제 목록');
+    } else {
+      url = `https://www.iflab.run/api/show/user/unsolved-problem/${githubId}`;
+      setModalTitle('해결하지 못한 문제 목록');
+    }
+    axios.get(url)
+      .then(response => {
+        setProblemListData(response.data);
+        setIsOpenedModal(true);
+      })
+      .catch(error => {
+        console.error('API 요청 중 오류 발생:');
+      });
+  }
+
+  function closeModal() {
+    setIsOpenedModal(false);
+  }
+
   return (
     <MemberContainer>
       <TopBar active={true} />
+      <ListModal
+        isOpen={isOpenedModal}
+        modalTitle={modalTitle}
+        problemListData={ProblemListData}
+        closeModal={closeModal}
+      />
+      <BlackScreen isOpen={isOpenedModal} />
       <ContentContainer>
         {MemberData.map((member, index) => (
           <ProfileWrapper delay={index * 0.25}>
@@ -57,11 +94,15 @@ const Member = () => {
             <MemberInfoWrapper>
               <MemberInfoRow>
                 <MemberInfoItem>해결한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>{member.solved}개</MemberInfoItem>
+                <MemberInfoItem blue={true} onClick={() => openProblemListModal('solved', member.githubId)}>
+                  {member.solved}개
+                </MemberInfoItem>
               </MemberInfoRow>
               <MemberInfoRow>
                 <MemberInfoItem>해결하지 못한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>{member.unsolved}개</MemberInfoItem>
+                <MemberInfoItem blue={true} onClick={() => openProblemListModal('unsolved', member.githubId)}>
+                  {member.unsolved}개
+                </MemberInfoItem>
               </MemberInfoRow>
             </MemberInfoWrapper>
           </MemberWrapper>

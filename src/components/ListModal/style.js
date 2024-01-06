@@ -115,6 +115,35 @@ const MemberBaekjoonId = styled.div`
   font-size: 16px;
 `
 
+const ProblemList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`
 
+const ProblemItem = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background-color: ${(props) => props.theme.background}00;
+  border-radius: 8px;
+  text-decoration: none;
+  &:hover {
+    background-color: ${(props) => props.theme.background};
+  }
+`
 
-export { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId };
+const ProblemDifficulty = styled.img`
+  width: 24px;
+  height: 24px;
+`
+
+const ProblemName = styled.div`
+  color: ${(props) => props.theme.contentText};
+  font-size: 16px;
+  font-weight: 500;
+`
+
+export { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId, ProblemList, ProblemItem, ProblemDifficulty, ProblemName };

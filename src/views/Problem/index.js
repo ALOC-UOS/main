@@ -54,6 +54,7 @@ const Problem = () => {
       <TopBar />
       <ListModal
         isOpen={isOpenedModal}
+        modalTitle="맞힌 사람 목록"
         memberListData={SolvedMemberList}
         closeModal={closeModal}
       />
