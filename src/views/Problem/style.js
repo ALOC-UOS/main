@@ -57,11 +57,43 @@ const ProblemItem = styled.div`
 const ProblemInfoWrap = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 8px;
 `
 
 const ProblemName = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
   color: ${(props) => props.theme.titleText};
   font-size: 24px;
+  font-weight: 500;
+`
+
+const ProblemDifficulty = styled.img`
+  width: 24px;
+  height: 24px;
+`
+
+const ProblemTags = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 8px;
+`
+
+const ProblemTag = styled.div`
+  display: flex;
+  border: 1px solid ${(props) => props.theme.primary};
+  border-radius: 12px;
+  padding: 4px 8px;
+  gap: 4px;
+`
+
+const ProblemTagText = styled.div`
+  color: ${(props) => props.theme.primary};
+  font-size: 12px;
   font-weight: 500;
 `
 
@@ -102,4 +134,4 @@ const ProblemButton = styled.div`
   }
 `
 
-export { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemCorrect, ProblemCorrectNum, ProblemButton };
+export { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemButton };

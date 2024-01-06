@@ -1,32 +1,33 @@
-import React from 'react';
-import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemCorrect, ProblemCorrectNum, ProblemButton } from './style';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemButton } from './style';
 import TopBar from '../../components/TopBar';
-
-const ProblemDataList = [
-  {
-    id: 1400,
-    name: '1400. 화물차',
-    correct: 5,
-    date: '2021-10-10',
-  },
-  { 
-    id: 12635,
-    name: '12635. 평범한 배낭',
-    correct: 7,
-    date: '2021-10-09',
-  },
-  {
-    id: 15809,
-    name: '15809. 전국시대',
-    correct: 6,
-    date: '2021-10-08',
-  },
-]
-
+import Bronze from '../../assets/bronze-small.svg';
+import Silver from '../../assets/silver-small.svg';
+import Gold from '../../assets/gold-small.svg';
+import Platinum from '../../assets/platinum-small.svg';
 
 const Problem = () => {
+  const [ProblemData, setProblemData] = useState([]);
+
+  useEffect(() => {
+    loadProblemData();
+  }, []);
+
   function moveProblemPage(number) {
     window.open("https://www.acmicpc.net/problem/" + number, "_blank");
+  };
+
+  function loadProblemData() {
+    let url = 'https://www.iflab.run/api/show/problem';
+    axios.get(url)
+      .then(response => {
+        setProblemData(response.data);
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error('API 요청 중 오류 발생:');
+      });
   };
 
   return (
@@ -36,31 +37,57 @@ const Problem = () => {
         <ContentWrapper>
           <ContentTitle>오늘의 문제</ContentTitle>
           <ProblemList>
-            <ProblemItem>
-              <ProblemInfoWrap>
-                <ProblemName>12635. 평범한 배낭</ProblemName>
-                <ProblemCorrect>
-                  맞힌사람
-                  <ProblemCorrectNum> 7명</ProblemCorrectNum>
-                </ProblemCorrect>
-              </ProblemInfoWrap>
-              <ProblemButton> 문제 확인하기 </ProblemButton>
-            </ProblemItem>
+            {ProblemData.length > 0 && (
+              <ProblemItem>
+                <ProblemInfoWrap>
+                  <ProblemName>
+                    <ProblemDifficulty src={ProblemData[0].difficulty < 6 ? Bronze : ProblemData[0].difficulty < 11 ? Silver : ProblemData[0].difficulty < 16 ? Gold : Platinum} />
+                    {ProblemData[0].id}. {ProblemData[0].title}
+                  </ProblemName>
+                  <ProblemTags>
+                    {JSON.parse(ProblemData[0].tags).map((tag) => (
+                      <ProblemTag>
+                        <ProblemTagText>{tag.korean}</ProblemTagText>
+                        <ProblemTagText>{tag.english}</ProblemTagText>
+                      </ProblemTag>
+                    ))}
+                  </ProblemTags>
+                  <ProblemCorrect>
+                    맞힌사람
+                    <ProblemCorrectNum> {ProblemData[0].solved}명</ProblemCorrectNum>
+                  </ProblemCorrect>
+                </ProblemInfoWrap>
+                <ProblemButton onClick={() => moveProblemPage(ProblemData[0].id)}>
+                  문제 확인하기
+                </ProblemButton>
+              </ProblemItem>
+            )}
           </ProblemList>
         </ContentWrapper>
         <ContentWrapper>
-          <ContentTitle>지난 문제</ContentTitle>
+          <ContentTitle>과거의 문제</ContentTitle>
           <ProblemList>
-            {ProblemDataList.map((problem, index) => (
-              <ProblemItem>
+            {ProblemData.slice(1).map((problem, index) => (
+              <ProblemItem key={index}>
                 <ProblemInfoWrap>
-                  <ProblemName>{problem.name}</ProblemName>
+                  <ProblemName>
+                    <ProblemDifficulty src={problem.difficulty < 6 ? Bronze : problem.difficulty < 11 ? Silver : problem.difficulty < 16 ? Gold : Platinum} />
+                    {problem.id}. {problem.title}
+                  </ProblemName>
+                  <ProblemTags>
+                    {JSON.parse(problem.tags).map((tag) => (
+                      <ProblemTag>
+                        <ProblemTagText>{tag.korean}</ProblemTagText>
+                        <ProblemTagText>{tag.english}</ProblemTagText>
+                      </ProblemTag>
+                    ))}
+                  </ProblemTags>
                   <ProblemCorrect>
                     맞힌사람
-                    <ProblemCorrectNum> {problem.correct}명</ProblemCorrectNum>
+                    <ProblemCorrectNum> {problem.solved}명</ProblemCorrectNum>
                   </ProblemCorrect>
                 </ProblemInfoWrap>
-                <ProblemButton onClick={moveProblemPage.bind(this, problem.id)}>
+                <ProblemButton onClick={() => moveProblemPage(problem.id)}>
                   문제 확인하기
                 </ProblemButton>
               </ProblemItem>
