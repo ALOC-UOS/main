@@ -130,6 +130,7 @@ const ProblemButton = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px 16px;
+  margin-top: auto;
   min-width: 120px;
   border-radius: 12px;
   background-color: ${(props) => props.theme.primary};
@@ -169,8 +170,9 @@ const ProblemTags = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  flex-grow: 1;
+  justify-content: center;
   gap: 12px;
+  flex-wrap: wrap;
 `
 
 const ProblemTag = styled.div`

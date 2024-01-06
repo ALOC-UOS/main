@@ -76,6 +76,7 @@ const ProblemDifficulty = styled.img`
 `
 
 const ProblemTags = styled.div`
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -98,6 +99,7 @@ const ProblemTagText = styled.div`
 `
 
 const ProblemCorrect = styled.div`
+  width: max-content;
   display: flex;
   flex-direction: row;
   color: ${(props) => props.theme.subText};
