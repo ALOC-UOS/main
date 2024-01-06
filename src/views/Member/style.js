@@ -31,19 +31,13 @@ const MemberContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-  position: fixed;
-
-  top: 50%;
-  left: 0px;
-  right: 0px;
-  transform: translateY(-50%);
-
   display: flex;
   flex-direction: row;
   gap: 40px;
-  padding: 24px 40px;
+  padding: 24px 0 24px 40px;
+  margin-top: 120px;
+  flex-wrap: wrap;
 
-  overflow-x: scroll;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -56,9 +50,17 @@ const ProfileWrapper = styled.div`
   flex-direction: column;
   border-radius: 24px;
   overflow: hidden;
-  min-width: 280px;
+  min-width: 240px;
+  width: calc((100% - 160px) / 4);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  @media (max-width: 1280px) {
+    width: calc((100% - 120px) / 3);
+  }
+  @media (max-width: 768px) {
+    width: calc((100% - 80px) / 2);
+  }
+
 `
 
 const ProfileBackgroundImage = styled.div`
