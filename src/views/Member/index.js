@@ -56,11 +56,11 @@ const Member = () => {
             <MemberInfoWrapper>
               <MemberInfoRow>
                 <MemberInfoItem>해결한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>0개</MemberInfoItem>
+                <MemberInfoItem blue={true}>{member.solved}개</MemberInfoItem>
               </MemberInfoRow>
               <MemberInfoRow>
                 <MemberInfoItem>해결하지 못한 문제 수</MemberInfoItem>
-                <MemberInfoItem blue={true}>0개</MemberInfoItem>
+                <MemberInfoItem blue={true}>{member.unsolved}개</MemberInfoItem>
               </MemberInfoRow>
             </MemberInfoWrapper>
           </MemberWrapper>
