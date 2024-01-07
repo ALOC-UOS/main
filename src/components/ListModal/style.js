@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const ListModalContainer = styled.div`
+position: relative;
   min-width: 400px;
   min-height: 480px;
   z-index: 300;
@@ -119,6 +120,7 @@ const ProblemList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 24px;
 `
 
 const ProblemItem = styled.a`
@@ -146,4 +148,22 @@ const ProblemName = styled.div`
   font-weight: 500;
 `
 
-export { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId, ProblemList, ProblemItem, ProblemDifficulty, ProblemName };
+const Reloader = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  color: ${props => props.theme.subText};
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: center;
+
+  cursor: pointer;
+  &:hover {
+    color: ${props => props.theme.contentText};
+  }
+`
+
+export { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId, ProblemList, ProblemItem, ProblemDifficulty, ProblemName, Reloader };

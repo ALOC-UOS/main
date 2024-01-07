@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId, ProblemList, ProblemItem, ProblemDifficulty, ProblemName } from './style';
+import { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, Icon, CloseButton, Divider, MemberList, MemberItem, ProfileImage, MemberWrapper, MemberName, MemberBaekjoonId, ProblemList, ProblemItem, ProblemDifficulty, ProblemName, Reloader } from './style';
 import memberIcon from '../../assets/member-icon.svg';
 import problemIcon from '../../assets/problem-icon.svg';
 import closeButton from '../../assets/close-button.svg';
@@ -8,7 +8,8 @@ import Silver from '../../assets/silver-small.svg';
 import Gold from '../../assets/gold-small.svg';
 import Platinum from '../../assets/platinum-small.svg';
 
-const ListModal = ({ isOpen, modalTitle, memberListData, problemListData, closeModal }) => {
+const ListModal = ({ isOpen, modalTitle, memberListData, problemListData, closeModal, checkSolvedProblem }) => {
+
   const renderMember = () => (
     <>
       <ListModalTopBar>
@@ -55,6 +56,7 @@ const ListModal = ({ isOpen, modalTitle, memberListData, problemListData, closeM
           </ProblemItem>
         ))}
       </ProblemList>
+      <Reloader onClick={checkSolvedProblem}>해결한 문제가 반영이 안됐나요?</Reloader>
     </>
   );
 

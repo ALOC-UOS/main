@@ -17,6 +17,8 @@ import Number1 from '../../assets/number-1.svg';
 
 const Member = () => {
   const [MemberData, setMemberData] = useState([]);
+  const [SelectedGithubId, setSelectedGithubId] = useState('');
+  const [SelectedType, setSelectedType] = useState('');
   const [ProblemListData, setProblemListData] = useState([]);
   const [isOpenedModal, setIsOpenedModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
@@ -50,6 +52,8 @@ const Member = () => {
       .then(response => {
         setProblemListData(response.data);
         setIsOpenedModal(true);
+        setSelectedGithubId(githubId);
+        setSelectedType(type);
       })
       .catch(error => {
         console.error('API 요청 중 오류 발생:');
@@ -58,6 +62,21 @@ const Member = () => {
 
   function closeModal() {
     setIsOpenedModal(false);
+    setSelectedGithubId('');
+    setSelectedType('');
+  }
+
+  function checkSolvedProblem() {
+    let url = `https://www.iflab.run/api/check/problem/${SelectedGithubId}`;
+
+    axios.get(url)
+      .then(response => {
+        loadMemberData();
+        openProblemListModal(SelectedType, SelectedGithubId);
+      })
+      .catch(error => {
+        console.error('API 요청 중 오류 발생:');
+      });
   }
 
   return (
@@ -68,6 +87,7 @@ const Member = () => {
         modalTitle={modalTitle}
         problemListData={ProblemListData}
         closeModal={closeModal}
+        checkSolvedProblem={checkSolvedProblem}
       />
       <BlackScreen isOpen={isOpenedModal} />
       <ContentContainer>
