@@ -13,13 +13,13 @@ const AppearProfile = keyframes`
 
 const MoveBackground = keyframes`
   0% {
-    background-position: 0px;
+    background-position: 20% 50%;
   }
   65% {
-    background-position: 300px;
+    background-position: -190% 50%;
   }
   100% {
-    background-position: 280px;
+    background-position: -180% 50%;
   }
 `
 
@@ -226,12 +226,13 @@ const MemberInfoItem = styled.div`
 `
 
 const SolvedAnimation = styled.div`
-  animation: ${MoveBackground} 3s ease forwards infinite;
+  animation: ${MoveBackground} 3s ease infinite;
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
+  background-size: 200% 100%;
   background-image: linear-gradient(60deg, transparent 20%, #ffffff80 20%, #ffffff80 35%,transparent 35%, transparent 40%, #ffffff40 40%, #ffffff40 45%,transparent 45%,transparent);
   opacity: 0;
 
