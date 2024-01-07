@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation } from './style';
+import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation, IconWrapper, Icon } from './style';
 import TopBar from '../../components/TopBar';
 import ListModal from '../../components/ListModal';
 import BlackScreen from '../../components/BlackScreen';
@@ -13,9 +13,13 @@ import Number4 from '../../assets/number-4.svg';
 import Number3 from '../../assets/number-3.svg';
 import Number2 from '../../assets/number-2.svg';
 import Number1 from '../../assets/number-1.svg';
+import LoadingIcon from '../../assets/loading-icon.svg';
+import CheckIcon from '../../assets/check-icon.svg';
 
 
 const Member = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isShowLoading, setIsShowLoading] = useState(false);
   const [MemberData, setMemberData] = useState([]);
   const [SelectedGithubId, setSelectedGithubId] = useState('');
   const [SelectedType, setSelectedType] = useState('');
@@ -67,12 +71,21 @@ const Member = () => {
   }
 
   function checkSolvedProblem() {
+    setIsLoading(true);
+    setIsShowLoading(true);
     let url = `https://www.iflab.run/api/check/problem/${SelectedGithubId}`;
 
     axios.get(url)
       .then(response => {
         loadMemberData();
         openProblemListModal(SelectedType, SelectedGithubId);
+        setTimeout(() => {
+          setIsShowLoading(false);
+        }, 500);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1500);
+
       })
       .catch(error => {
         console.error('API 요청 중 오류 발생:');
@@ -82,6 +95,10 @@ const Member = () => {
   return (
     <MemberContainer>
       <TopBar active={true} />
+      <IconWrapper active={isLoading}>
+        <Icon active={isShowLoading} src={LoadingIcon} />
+        <Icon active={!isShowLoading && isLoading} src={CheckIcon} check={true} />
+      </IconWrapper>
       <ListModal
         isOpen={isOpenedModal}
         modalTitle={modalTitle}

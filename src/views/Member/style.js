@@ -23,6 +23,15 @@ const MoveBackground = keyframes`
   }
 `
 
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+`
+
 const MemberContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -241,4 +250,47 @@ const SolvedAnimation = styled.div`
   `}
 `
 
-export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation };
+const IconWrapper = styled.div`
+  z-index: 300;
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: ${(props) => props.theme.primary};
+  border-radius: 50%;
+
+  ${(props) => props.active && css`
+    opacity: 1;
+  `}
+`
+
+const Icon = styled.img`
+  position: absolute;
+  top: 25%;
+  left: 50%;
+
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transform-origin: top left;
+  scale: 0.5;
+  ${(props) => props.active && css`
+    top: 50%;
+    opacity: 1;
+    animation: ${rotate360} 1s linear infinite;
+    scale: 1;
+  `}
+
+  ${(props) => props.active && props.check && css`
+    top: 50%;
+    opacity: 1;
+    animation: none;
+    scale: 1;
+  `}
+`
+
+export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation, IconWrapper, Icon };
