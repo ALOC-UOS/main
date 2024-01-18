@@ -235,7 +235,7 @@ const MemberInfoItem = styled.div`
 `
 
 const SolvedAnimation = styled.div`
-  animation: ${MoveBackground} 3s ease infinite;
+  animation: ${MoveBackground} 3s ease forwards;
   position: absolute;
   top: 0px;
   left: 0px;
