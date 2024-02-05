@@ -117,6 +117,8 @@ const MemberBaekjoonId = styled.div`
 `
 
 const ProblemList = styled.div`
+  max-height: 480px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 4px;
