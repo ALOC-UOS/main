@@ -108,7 +108,7 @@ const ProblemTitleWrapper = styled.div`
   gap: 8px;
   border: 1px solid #ffffff;
   border-radius: 24px;
-  padding: 8px 16px;
+  padding: 8px 8px 8px 16px;
   margin-bottom: 4px;
   flex-shrink: 0;
 `
