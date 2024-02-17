@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const MoveUp = keyframes`
   0% {
@@ -21,6 +21,18 @@ const MoveDown = keyframes`
     opacity: 1;
   }
 `
+
+const DisappearUp = keyframes`
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+`
+
 
 const AppearBackground = keyframes`
   0% {
@@ -188,4 +200,60 @@ const ProblemTagText = styled.div`
   font-weight: 500;
 `
 
-export { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, ProblemTitleWrapper, ProblemTitle, ProblemDifficulty, ProblemName, ProblemButton, BackgroundImage, ProblemTags, ProblemTag, ProblemTagText };
+const SolveMemberContainer = styled.div`
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+`
+
+const MemberWrapper = styled.div`
+  animation: ${MoveUp} 1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 32px;
+  background-color: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+  padding: 8px;
+
+  ${props => props.isShow && css`
+    animation: ${DisappearUp} 1s ease-in-out forwards;
+  `}
+`
+
+const ProfileImage = styled.img`
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background-color: #ffffff;
+`
+
+const Description = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 12px;
+`
+
+const MemberName = styled.div`
+  color: #408cff;
+  font-size: 12px;
+  font-weight: 500;
+`
+
+const SolveTime = styled.div`
+  color: #ffffff80;
+  font-size: 12px;
+  font-weight: 500;
+`
+
+export { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, ProblemTitleWrapper, ProblemTitle, ProblemDifficulty, ProblemName, ProblemButton, BackgroundImage, ProblemTags, ProblemTag, ProblemTagText, SolveMemberContainer, MemberWrapper, ProfileImage, Description, MemberName, SolveTime };
