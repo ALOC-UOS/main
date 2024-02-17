@@ -92,10 +92,12 @@ const Home = () => {
     const solvedAtMinute = Number(solvedAt[3]) * 10 + Number(solvedAt[4]);
     const solvedAtSecond = Number(solvedAt[6]) * 10 + Number(solvedAt[7]);
 
-    if (nowHour - solvedAtHour > 0) {
+    console.log(nowHour, nowMinute, nowSecond, solvedAtHour, solvedAtMinute, solvedAtSecond);
+
+    if (nowHour * 60 + nowMinute - solvedAtHour * 60 - solvedAtMinute > 60) {
       return nowHour - solvedAtHour + "시간 전";
-    } else if (nowMinute - solvedAtMinute > 0) {
-      return nowMinute - solvedAtMinute + "분 전";
+    } else if (nowHour * 60 + nowMinute - solvedAtHour * 60 - solvedAtMinute > 0) {
+      return nowHour * 60 + nowMinute - solvedAtHour * 60 - solvedAtMinute + "분 전";
     } else if (nowSecond - solvedAtSecond > 0) {
       return nowSecond - solvedAtSecond + "초 전";
     } else {

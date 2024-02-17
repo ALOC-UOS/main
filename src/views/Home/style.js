@@ -219,7 +219,7 @@ const MemberWrapper = styled.div`
   border-radius: 32px;
   background-color: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(16px);
-  padding: 8px;
+  padding: 8px 12px 8px 8px;
 
   ${props => props.isShow && css`
     animation: ${DisappearUp} 1s ease-in-out forwards;
@@ -227,11 +227,10 @@ const MemberWrapper = styled.div`
 `
 
 const ProfileImage = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   margin-right: 4px;
   border-radius: 50%;
-  background-color: #ffffff;
 `
 
 const Description = styled.div`
@@ -239,14 +238,14 @@ const Description = styled.div`
   flex-direction: row;
   align-items: center;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   margin-right: 12px;
 `
 
 const MemberName = styled.div`
   color: #408cff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 `
 
