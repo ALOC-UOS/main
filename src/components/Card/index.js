@@ -23,7 +23,7 @@ const Card = () => {
           <CardContent>
             <Icon src={MemberPlusIcon} />
             <Text>
-              <Text textColor={'blue'}>김영진</Text>님이 &nbsp;
+              <Text textColor={'blue'}>조종빈, 김하람</Text>님이 &nbsp;
               <Text textColor={'blue'}>모임</Text>에 합류했어요!
             </Text>
           </CardContent>
@@ -39,6 +39,18 @@ const Card = () => {
             <Text>
               <Text textColor={'blue'}>박나은</Text>님이 &nbsp;
               <Text textColor={'silver'}>실버 I</Text>을 달성했어요!
+            </Text>
+          </CardContent>
+        </CardContentWrapper>
+        <CardContentWrapper>
+          <CardSubscription>
+            2024년 3월 3일 일요일
+          </CardSubscription>
+          <CardContent>
+            <Icon src={MemberPlusIcon} />
+            <Text>
+              <Text textColor={'blue'}>김영진</Text>님이 &nbsp;
+              <Text textColor={'blue'}>모임</Text>에 합류했어요!
             </Text>
           </CardContent>
         </CardContentWrapper>
