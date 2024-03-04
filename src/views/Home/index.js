@@ -8,6 +8,7 @@ import Bronze from '../../assets/bronze-small.svg';
 import Silver from '../../assets/silver-small.svg';
 import Gold from '../../assets/gold-small.svg';
 import Platinum from '../../assets/platinum-small.svg';
+import Card from '../../components/Card';
 
 const Home = () => {
   const [ProblemData, setProblemData] = useState({});
@@ -92,8 +93,6 @@ const Home = () => {
     const solvedAtMinute = Number(solvedAt[3]) * 10 + Number(solvedAt[4]);
     const solvedAtSecond = Number(solvedAt[6]) * 10 + Number(solvedAt[7]);
 
-    console.log(nowHour, nowMinute, nowSecond, solvedAtHour, solvedAtMinute, solvedAtSecond);
-
     if (nowHour * 60 + nowMinute - solvedAtHour * 60 - solvedAtMinute > 60) {
       return nowHour - solvedAtHour + "시간 전";
     } else if (nowHour * 60 + nowMinute - solvedAtHour * 60 - solvedAtMinute > 0) {
@@ -149,6 +148,7 @@ const Home = () => {
               </SolveMemberContainer>
             )}
           </ProblemContainer>
+          <Card />
         </ContentContainer>
       )}
     </HomeContainer>
