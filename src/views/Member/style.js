@@ -50,6 +50,12 @@ const ContentContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 480px) {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ProfileWrapper = styled.div`
@@ -59,14 +65,17 @@ const ProfileWrapper = styled.div`
   flex-direction: column;
   border-radius: 24px;
   overflow: hidden;
-  min-width: 240px;
-  width: calc((100% - 160px) / 4);
+  min-width: 260px;
+  width: calc((100% - 200px) / 5);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  @media (max-width: 1280px) {
+  @media (max-width: 1540px) {
+    width: calc((100% - 160px) / 4);
+  }
+  @media (max-width: 1240px) {
     width: calc((100% - 120px) / 3);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 940px) {
     width: calc((100% - 80px) / 2);
   }
 
@@ -236,6 +245,7 @@ const MemberInfoItem = styled.div`
 
 const SolvedAnimation = styled.div`
   animation: ${MoveBackground} 3s ease forwards;
+  animation-delay: ${(props) => props.delay}s;
   position: absolute;
   top: 0px;
   left: 0px;

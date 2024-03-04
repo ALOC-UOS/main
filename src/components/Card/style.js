@@ -7,6 +7,10 @@ const CardContainer = styled.div`
   gap: 24px;
   margin-top: 24px;
   width: calc(100vw - 80px);
+  @media (max-width: 480px) {
+    width: calc(100vw - 32px);
+    flex-direction: column;
+  }
 `
 
 const CardWrapper = styled.div`
@@ -14,6 +18,9 @@ const CardWrapper = styled.div`
   border-radius: 16px;
   background-color: ${(props) => props.theme.foreground};
   padding: 24px 16px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 
 const CardTop = styled.div`

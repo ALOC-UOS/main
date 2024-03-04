@@ -66,7 +66,7 @@ const Card = () => {
           <CardContent>
             <Icon src={CalendarIcon} />
             <Text>
-              3월 5일 화요일, 오후 5시
+              3월 5일 화요일, 오후 7시
             </Text>
           </CardContent>
           <CardContent>

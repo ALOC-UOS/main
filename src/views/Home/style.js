@@ -67,7 +67,8 @@ const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.background};
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 48px;
 `
 
 const ContentContainer = styled.div`
@@ -87,6 +88,9 @@ const ProblemContainer = styled.div`
   height: 483px;
   overflow: hidden;
   background-color: #121314;
+  @media (max-width: 480px) {
+    width: calc(100vw - 32px);
+  }
 `
 
 const ProblemWrapper = styled.div`
@@ -202,12 +206,13 @@ const ProblemTagText = styled.div`
 
 const SolveMemberContainer = styled.div`
   position: absolute;
+  width: 100%;
   bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 12px;
 `
 

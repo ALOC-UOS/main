@@ -111,7 +111,7 @@ const Member = () => {
         {MemberData.map((member, index) => (
           <ProfileWrapper delay={index * 0.25}>
             <ProfileBackgroundImage solved={member.todaySolved}>
-              <SolvedAnimation solved={member.todaySolved} />
+              <SolvedAnimation solved={member.todaySolved} delay={index * 0.25} />
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
                 <ProfileImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />
               </ProfileLink>
