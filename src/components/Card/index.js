@@ -6,6 +6,7 @@ import AllSolveIcon from '../../assets/all-solve-icon.svg';
 import MemberDotIcon from '../../assets/member-dot-icon.svg';
 import MemberPlusIcon from '../../assets/member-plus-icon.svg';
 import CardContent from './CardContent';
+import ProblemList from './ProblemList';
 
 const Card = () => {
   const dummyData = [
@@ -95,6 +96,15 @@ const Card = () => {
             />
           );
         })}
+      </CardWrapper>
+      <CardWrapper>
+        <CardTop>
+          <CardLabel> 지나간 문제</CardLabel>
+          <CardTitle>
+            문제 목록
+          </CardTitle>
+        </CardTop>
+        <ProblemList />
       </CardWrapper>
     </CardContainer>
   );
