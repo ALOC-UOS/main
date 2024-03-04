@@ -19,11 +19,9 @@ const ProblemItem = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${(props) => props.theme.foreground};
-  border-radius: 16px;
-  width: calc(100% + 16px);
+  border-radius: 8px;
   padding: 4px 8px;
   cursor: pointer;
-  transform: translateX(-8px);
 
   &:hover {
     filter: brightness(0.9);
@@ -31,7 +29,7 @@ const ProblemItem = styled.div`
   &:active {
     transition: all 0.05s;
     filter: brightness(0.8);
-    transform: scale(0.95) translateX(-8px);
+    transform: scale(0.95);
   }
 `
 
