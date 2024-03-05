@@ -4,8 +4,11 @@ const InputContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
   margin-top: 16px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
 `
 
 const InputLabel = styled.div`

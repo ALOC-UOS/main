@@ -8,6 +8,7 @@ const SettingContainer = styled.div`
   align-items: center;
 `
 
+/*
 const ButtonWrap = styled.div`
   position: fixed;
   left: 50%;
@@ -20,6 +21,7 @@ const ButtonWrap = styled.div`
   margin-top: 16px;
   transform: translateX(-50%);
 `
+*/
 
 const InputBox = styled.div`
   position: relative;
@@ -110,4 +112,4 @@ const ArrowIcon = styled.img`
   transform: ${(props) => (props.selected ? 'rotateX(180deg)' : 'rotateX(0deg)')};
 `
 
-export { SettingContainer, ButtonWrap, InputBox, InputList, InputItem, SelectedText, ArrowIcon };
+export { SettingContainer, InputBox, InputList, InputItem, SelectedText, ArrowIcon };

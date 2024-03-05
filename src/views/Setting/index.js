@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { SettingContainer, ButtonWrap, InputBox, InputList, InputItem, SelectedText, ArrowIcon } from './style';
+import { SettingContainer, InputBox, InputList, InputItem, SelectedText, ArrowIcon } from './style';
 import InputWrap from '../../components/Input';
 import Button from '../../components/Buttons';
 import InputArrowIcon from '../../assets/input-arrow-icon.svg';
@@ -88,6 +88,25 @@ const algorithmList = [
   },
 ];
 
+const problemTierList = [
+  {
+    tier_id: 1,
+    tier_name: '브론즈',
+  },
+  {
+    tier_id: 2,
+    tier_name: '실버',
+  },
+  {
+    tier_id: 3,
+    tier_name: '골드',
+  },
+  {
+    tier_id: 4,
+    tier_name: '플래티넘',
+  }
+];
+
 const Setting = () => {
   const [originalAlgorithmId, setOriginalAlgorithmId] = useState('');
   const [algorithmId, setAlgorithmId] = useState('');
@@ -143,36 +162,34 @@ const Setting = () => {
 
   return (
     <SettingContainer>
-      <InputWrap label={'알고리즘'}>
+      <InputWrap label={'알고리즘 변경'}>
         <InputBox onClick={() => openList('algorithm')}>
           <SelectedText>{algorithmName}</SelectedText>
           <ArrowIcon src={InputArrowIcon} selected={isOpenList === 'algorithm'} />
+          <InputList
+            isOpen={isOpenList === 'algorithm'}
+            ItemNumber={algorithmList.length}
+          >
+            {algorithmList.map((ListItem) => (
+              <InputItem
+                key={ListItem.list_id}
+                onClick={() => selectAlgorithm(ListItem.algo_name)}
+                selected={ListItem.algo_name === algorithmName}
+              >
+                {ListItem.algo_name}
+              </InputItem>
+            ))}
+          </InputList>
         </InputBox>
-        <InputList
-          isOpen={isOpenList === 'algorithm'}
-          ItemNumber={algorithmList.length}
-        >
-          {algorithmList.map((ListItem) => (
-            <InputItem
-              key={ListItem.list_id}
-              onClick={() => selectAlgorithm(ListItem.algo_name)}
-              selected={ListItem.algo_name === algorithmName}
-            >
-              {ListItem.algo_name}
-            </InputItem>
-          ))}
-        </InputList>
-      </InputWrap>
-      <ButtonWrap>
-        <Button onClick={clickInitButton}>초기화</Button>
         <Button
           color={"blue"}
           type={isDisabled ? "disabled" : "active"}
+          size={"small"}
           onClick={clickSaveButton}
         >
           저장
         </Button>
-      </ButtonWrap>
+      </InputWrap>
     </SettingContainer>
   );
 };

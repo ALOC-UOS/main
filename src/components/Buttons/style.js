@@ -40,8 +40,10 @@ const Button = styled.button`
   ${(props) => props.size === 'small' && css`
     width: fit-content;
     font-size: 14px;
-    padding: 12px 16px;
-    min-width: 74px;
+    padding: 8px 16px;
+    min-width: 40px;
+    border-radius: 8px;
+    align-self: flex-end;
   `}
 `
 
