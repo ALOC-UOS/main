@@ -9,6 +9,7 @@ import {
 import Home from './views/Home';
 import Problem from './views/Problem';
 import Member from './views/Member';
+import Battle from './views/Battle';
 import Setting from './views/Setting';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/problem" element={<Problem />} />
             <Route path="/member" element={<Member />} />
+            <Route path="/battle" element={<Battle />} />
             <Route path="/setting" element={<Setting />} />
           </Route>
         </Routes>
