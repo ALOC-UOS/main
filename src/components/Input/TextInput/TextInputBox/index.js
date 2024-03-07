@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputBox, Input } from './style';
+import { InputBox } from './style';
 
 const TextInputBox = ({
   placeholder,

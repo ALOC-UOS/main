@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { ProblemListContainer, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTag, ProblemTagText } from './style';
+import { ProblemListContainer, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty } from './style';
 import Bronze from '../../../assets/bronze-small.png';
 import Silver from '../../../assets/silver-small.png';
 import Gold from '../../../assets/gold-small.png';
