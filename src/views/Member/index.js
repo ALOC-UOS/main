@@ -4,10 +4,10 @@ import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundIma
 import TopBar from '../../components/TopBar';
 import ListModal from '../../components/ListModal';
 import BlackScreen from '../../components/BlackScreen';
-import Bronze from '../../assets/bronze.svg';
-import Silver from '../../assets/silver.svg';
-import Gold from '../../assets/gold.svg';
-import Platinum from '../../assets/platinum.svg';
+import Bronze from '../../assets/bronze.png';
+import Silver from '../../assets/silver.png';
+import Gold from '../../assets/gold.png';
+import Platinum from '../../assets/platinum.png';
 import Number5 from '../../assets/number-5.svg';
 import Number4 from '../../assets/number-4.svg';
 import Number3 from '../../assets/number-3.svg';

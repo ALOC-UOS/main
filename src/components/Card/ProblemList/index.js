@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { ProblemListContainer, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTag, ProblemTagText } from './style';
-import Bronze from '../../../assets/bronze-small.svg';
-import Silver from '../../../assets/silver-small.svg';
-import Gold from '../../../assets/gold-small.svg';
-import Platinum from '../../../assets/platinum-small.svg';
+import Bronze from '../../../assets/bronze-small.png';
+import Silver from '../../../assets/silver-small.png';
+import Gold from '../../../assets/gold-small.png';
+import Platinum from '../../../assets/platinum-small.png';
 
 const ProblemList = () => {
   const [ProblemData, setProblemData] = useState([]);

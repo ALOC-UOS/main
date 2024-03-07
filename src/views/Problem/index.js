@@ -4,10 +4,10 @@ import { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, Probl
 import TopBar from '../../components/TopBar';
 import ListModal from '../../components/ListModal';
 import BlackScreen from '../../components/BlackScreen';
-import Bronze from '../../assets/bronze-small.svg';
-import Silver from '../../assets/silver-small.svg';
-import Gold from '../../assets/gold-small.svg';
-import Platinum from '../../assets/platinum-small.svg';
+import Bronze from '../../assets/bronze-small.png';
+import Silver from '../../assets/silver-small.png';
+import Gold from '../../assets/gold-small.png';
+import Platinum from '../../assets/platinum-small.png';
 
 const Problem = () => {
   const [ProblemData, setProblemData] = useState([]);

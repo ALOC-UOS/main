@@ -4,10 +4,10 @@ import { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, Prob
 import TopBar from '../../components/TopBar';
 import ProblemBackgroundImage from '../../assets/background.png';
 import RightArrowIcon from '../../assets/right-arrow-icon.svg';
-import Bronze from '../../assets/bronze-small.svg';
-import Silver from '../../assets/silver-small.svg';
-import Gold from '../../assets/gold-small.svg';
-import Platinum from '../../assets/platinum-small.svg';
+import Bronze from '../../assets/bronze-small.png';
+import Silver from '../../assets/silver-small.png';
+import Gold from '../../assets/gold-small.png';
+import Platinum from '../../assets/platinum-small.png';
 import Card from '../../components/Card';
 
 const Home = () => {

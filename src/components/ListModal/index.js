@@ -3,10 +3,10 @@ import { ListModalContainer, ListModalTopBar, ModalTitle, Wrapper, IconWrapper, 
 import memberIcon from '../../assets/member-icon.svg';
 import problemIcon from '../../assets/problem-icon.svg';
 import closeButton from '../../assets/close-button.svg';
-import Bronze from '../../assets/bronze-small.svg';
-import Silver from '../../assets/silver-small.svg';
-import Gold from '../../assets/gold-small.svg';
-import Platinum from '../../assets/platinum-small.svg';
+import Bronze from '../../assets/bronze-small.png';
+import Silver from '../../assets/silver-small.png';
+import Gold from '../../assets/gold-small.png';
+import Platinum from '../../assets/platinum-small.png';
 
 const ListModal = ({ isOpen, modalTitle, memberListData, problemListData, closeModal, checkSolvedProblem }) => {
 

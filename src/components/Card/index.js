@@ -51,11 +51,11 @@ const Card = () => {
       contents: [
         {
           Icon: CalendarIcon,
-          Text: '3월 5일 화요일, 오후 7시'
+          Text: '3월 12일 화요일, 오후 7시'
         },
         {
           Icon: LocationIcon,
-          Text: '중앙도서관 3층, 스터디룸 11실'
+          Text: '정보기술관 110호'
         }
       ]
     },
@@ -84,7 +84,7 @@ const Card = () => {
         <CardTop>
           <CardLabel> 예정된 일정 </CardLabel>
           <CardTitle>
-            정기 세미나 - 2회차
+            정기 세미나 - 3회차
           </CardTitle>
         </CardTop>
         {dummyData2.map((data, index) => {
