@@ -17,4 +17,11 @@ const InputLabel = styled.div`
   letter-spacing: -1px;
   user-select: none;
 `
-export { InputContainer, InputLabel };
+
+const TextInputBoxWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+
+export { InputContainer, InputLabel, TextInputBoxWrap };

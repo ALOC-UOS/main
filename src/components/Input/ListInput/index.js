@@ -1,37 +1,74 @@
-import React from 'react';
-import { InputBox, InputList, InputItem, SelectedText, ArrowIcon } from './style';
-import InputArrowIcon from '../../../assets/input-arrow-icon.svg';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { InputContainer, InputLabel } from './style';
+import Button from '../../../components/Buttons';
+import ListInputBox from './ListInputBox';
 
-const ListInput = ({
-  apiURL,
-  listName,
-  listData,
-  isOpenList,
-  selectedItemId,
-  selectedItemName,
-  openList,
-  selectItem
-}) => {
+const ListInput = ({ label, apiURL, listName, listData }) => {
+  const [isOpenList, setOpenList] = useState('');
+  const [selectedItemId, setSelectedItemId] = useState('');
+  const [selectedItemName, setSelectedItemName] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    const url = 'https://www.iflab.run/api/' + apiURL;
+    axios.get(url)
+      .then((response) => {
+        setSelectedItemName(listData.find((item) => item.id === response.data).name);
+      })
+      .catch((error) => {
+        console.log(error);
+      }
+    );
+  }, [apiURL, listData]);
+
+  const openList = (id) => {
+    if(id === isOpenList) {
+      setOpenList('');
+      return;
+    }
+    setOpenList(id);
+  }
+
+  const selectItem = (selectedItem) => {
+    setSelectedItemId(listData.find((item) => item.name === selectedItem).id);
+    setSelectedItemName(selectedItem);
+    setOpenList('');
+    setIsDisabled(false);
+  }
+
+  const clickSaveButton = () => {
+    const url = 'https://www.iflab.run/api/' + apiURL;
+    axios.patch(url, {
+      id: selectedItemId,
+      name: selectedItemName
+    })
+    setIsDisabled(true);
+    setSelectedItemId('');
+  }
+
   return (
-    <InputBox onClick={() => openList(listName)}>
-      <SelectedText>{selectedItemName}</SelectedText>
-      <ArrowIcon src={InputArrowIcon} selected={isOpenList === listName} />
-      <InputList
-        isOpen={isOpenList === listName}
-        ItemNumber={listData.length}
+    <InputContainer>
+      <InputLabel>{label}</InputLabel>
+      <ListInputBox
+        listName={listName}
+        listData={listData}
+        isOpenList={isOpenList}
+        selectedItemId={selectedItemId}
+        selectedItemName={selectedItemName}
+        openList={openList}
+        selectItem={selectItem}
+      />
+      <Button
+        color={"blue"}
+        type={isDisabled ? "disabled" : "active"}
+        size={"small"}
+        onClick={clickSaveButton}
       >
-        {listData.map((ListItem) => (
-          <InputItem
-            key={ListItem.list_id}
-            onClick={() => selectItem(ListItem.name)}
-            selected={ListItem.name === selectedItemName}
-          >
-            {ListItem.name}
-          </InputItem>
-        ))}
-      </InputList>
-    </InputBox>
-  );
+        저장
+      </Button>
+    </InputContainer>
+  )
 }
 
 export default ListInput;
