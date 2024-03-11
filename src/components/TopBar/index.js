@@ -24,11 +24,11 @@ const TopBar = ({ active }) => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    if( path === '/test/' || path === '/test') {
+    if( path === '/main/' || path === '/main') {
       setSelectedItem('/');
-    } else if (path === '/test/problem/' || path === '/test/problem') {
+    } else if (path === '/main/problem/' || path === '/main/problem') {
       setSelectedItem('/problem');
-    } else if (path === '/test/member/' || path === '/test/member') {
+    } else if (path === '/main/member/' || path === '/main/member') {
       setSelectedItem('/member');
     }
   }, []);
