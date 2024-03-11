@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+![background](https://github.com/O-TRIALANDERROR/main/assets/43953794/16eff186-7931-4d4b-bcfa-da6a60061692)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🎓 씨플(C-People)
 
-### `npm start`
+> 서울시립대학교 컴퓨터과학부 학생들을 위한 알고리즘 스터디 사이트입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
+✏️ <br/>
+*“씨플 운영진이 선정한 12주차의 알고리즘”* <br/>
+매주마다 새로운 알고리즘으로 변경되는 문제들을 만나보세요!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+🃏 <br/>
+*“하루마다 올라가는 문제 난이도”* <br/>
+실버4부터 골드3까지 하루마다 난이도가 올라가면서 실력을 기를 수 있어요!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌐 Website
+[C-People](https://o-trialanderror.github.io/main)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br/>
+<br/>
 
-### `npm run eject`
+## 👥 C-People Team
+| 프로필 | 이름 | 학번 | 가입일 |
+|:-:|:-:|:-:|:-:|
+|<img src='https://avatars.githubusercontent.com/u/43953794?v=4' width="100" /> |이종우|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/124661981?v=4' width="100" /> |이강민|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/121008507?v=4' width="100" /> |문재영|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/105478962?v=4' width="100" /> |조수아|21학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/109049398?v=4' width="100" /> |박상윤|22학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/132985164?v=4' width="100" /> |박나은|21학번|2024/02/21|
+|<img src='https://avatars.githubusercontent.com/u/81912273?v=4' width="100" /> |김영진|20학번|2024/03/03|
+|<img src='https://avatars.githubusercontent.com/u/81912837?v=4' width="100" /> |김하람|20학번|2024/03/04|
+|<img src='https://avatars.githubusercontent.com/u/81405795?v=4' width="100" /> |조종빈|20학번|2024/03/04|
+|<img src='https://avatars.githubusercontent.com/u/81704465?v=4' width="100" /> |정다현|21학번|2024/03/07|
+|<img src='https://avatars.githubusercontent.com/u/96644508?v=4' width="100" /> |박주영|21학번|2024/03/08|
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br/>
+<br/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
+<b>Frontend:</b> Javascript, React <br/>
+<b>Backend:</b> Python, Flask <br/>
+<b>Design:</b> Figma <br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
