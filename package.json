@@ -1,6 +1,6 @@
 {
-  "homepage": "https://o-trialanderror.github.io/main/",
-  "name": "씨플(C-People)",
+  "homepage": "https://o-trialanderror.github.io/main",
+  "name": "C-People",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
