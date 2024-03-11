@@ -9,21 +9,19 @@
 
 <br/>
 
-✏️ <br/>
-*“씨플 운영진이 선정한 12주차의 알고리즘”* <br/>
+### ✏️ *“씨플 운영진이 선정한 12주차의 알고리즘”* <br/>
 매주마다 새로운 알고리즘으로 변경되는 문제들을 만나보세요!
 
 <br/>
 
-🃏 <br/>
-*“하루마다 올라가는 문제 난이도”* <br/>
+### 🃏 *“하루마다 올라가는 문제 난이도”* <br/>
 실버4부터 골드3까지 하루마다 난이도가 올라가면서 실력을 기를 수 있어요!
 
 <br/>
 <br/>
 
-## 🌐 Website
-[C-People](https://o-trialanderror.github.io/main)
+## 👀 Preview
+### [🌐 WebSite](https://o-trialanderror.github.io/main)
 
 <br/>
 <br/>
