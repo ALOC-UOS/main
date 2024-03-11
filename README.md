@@ -31,17 +31,17 @@
 ## 👥 C-People Team
 | 프로필 | 이름 | 학번 | 가입일 |
 |:-:|:-:|:-:|:-:|
-|<img src='https://avatars.githubusercontent.com/u/43953794?v=4' width="100" /> |이종우|20학번|2024/02/08|
-|<img src='https://avatars.githubusercontent.com/u/124661981?v=4' width="100" /> |이강민|20학번|2024/02/08|
-|<img src='https://avatars.githubusercontent.com/u/121008507?v=4' width="100" /> |문재영|20학번|2024/02/08|
-|<img src='https://avatars.githubusercontent.com/u/105478962?v=4' width="100" /> |조수아|21학번|2024/02/08|
-|<img src='https://avatars.githubusercontent.com/u/109049398?v=4' width="100" /> |박상윤|22학번|2024/02/08|
-|<img src='https://avatars.githubusercontent.com/u/132985164?v=4' width="100" /> |박나은|21학번|2024/02/21|
-|<img src='https://avatars.githubusercontent.com/u/81912273?v=4' width="100" /> |김영진|20학번|2024/03/03|
-|<img src='https://avatars.githubusercontent.com/u/81912837?v=4' width="100" /> |김하람|20학번|2024/03/04|
-|<img src='https://avatars.githubusercontent.com/u/81405795?v=4' width="100" /> |조종빈|20학번|2024/03/04|
-|<img src='https://avatars.githubusercontent.com/u/81704465?v=4' width="100" /> |정다현|21학번|2024/03/07|
-|<img src='https://avatars.githubusercontent.com/u/96644508?v=4' width="100" /> |박주영|21학번|2024/03/08|
+|<img src='https://avatars.githubusercontent.com/u/43953794?v=4' width="100" /> |[이종우](https://github.com/Dodolist)|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/124661981?v=4' width="100" /> |[이강민](https://github.com/SuperStarKang)|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/121008507?v=4' width="100" /> |[문재영](https://github.com/ProblmZro)|20학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/105478962?v=4' width="100" /> |[조수아](https://github.com/soonga00)|21학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/109049398?v=4' width="100" /> |[박상윤](https://github.com/sangyeun003)|22학번|2024/02/08|
+|<img src='https://avatars.githubusercontent.com/u/132985164?v=4' width="100" /> |[박나은](https://github.com/na1-4an)|21학번|2024/02/21|
+|<img src='https://avatars.githubusercontent.com/u/81912273?v=4' width="100" /> |[김영진](https://github.com/haochaen73)|20학번|2024/03/03|
+|<img src='https://avatars.githubusercontent.com/u/81912837?v=4' width="100" /> |[김하람](https://github.com/alicehrk)|20학번|2024/03/04|
+|<img src='https://avatars.githubusercontent.com/u/81405795?v=4' width="100" /> |[조종빈](https://github.com/jongbin26)|20학번|2024/03/04|
+|<img src='https://avatars.githubusercontent.com/u/81704465?v=4' width="100" /> |[정다현](https://github.com/bronging)|21학번|2024/03/07|
+|<img src='https://avatars.githubusercontent.com/u/96644508?v=4' width="100" /> |[박주영](https://github.com/parkjuyeong0312)|21학번|2024/03/08|
 
 <br/>
 <br/>
