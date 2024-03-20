@@ -1,5 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 
+const BreathAnimation = keyframes`
+  0% {
+    width: 72px;
+    height: 108px;
+  }
+  100% {
+    width: 96px;
+    height: 144px;
+  }
+`
+
 const AppearAnimation = keyframes`
   0% {
     transform: translateY(-24px);
@@ -162,6 +173,7 @@ const WeekList = styled.div`
 `
 
 const WeekItem = styled.div`
+  position: relative;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -171,19 +183,49 @@ const WeekItem = styled.div`
   border-radius: 16px;
   cursor: pointer;
   gap: 4px;
+  overflow: hidden;
+  &::before {
+    animation: ${BreathAnimation} 2s ease-in-out alternate infinite;
+    transition: all 0.5s;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 72px;
+    height: 108px;
+    background-color: ${(props) => props.theme.primary};
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: 0 0;
+    z-index: -1;
+  }
   &:hover {
     filter: brightness(0.9);
+    &::before {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+    }
   }
   &:active {
     transition: all 0.05s;
     filter: brightness(0.8);
     transform: scale(0.95);
+    &::before {
+      transition: all 0.3s;
+      opacity: 1;
+      transform: scale(3) translate(-50%, -50%);
+    }
   }
   ${(props) => props.isActive && `
     background-color: ${props.theme.primary};
     color: #ffffff;
     &:hover {
       filter: brightness(1);
+      &::before {
+        transition: all 0.3s;
+        transform: scale(4) translate(-50%, -50%);
+      }
     }
     &:active {
       filter: brightness(1);
