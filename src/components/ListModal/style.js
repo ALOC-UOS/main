@@ -81,9 +81,11 @@ const Divider = styled.div`
 `
 
 const MemberList = styled.div`
+  max-height: 320px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow-y: auto;
 `
 
 const MemberItem = styled.div`
