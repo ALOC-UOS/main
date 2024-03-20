@@ -39,7 +39,7 @@ const ListInput = ({ label, apiURL, listName, listData }) => {
 
   const clickSaveButton = () => {
     const url = 'https://www.iflab.run/api/' + apiURL;
-    axios.patch(url, {
+    axios.post(url, {
       id: selectedItemId,
       name: selectedItemName
     })
