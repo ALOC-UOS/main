@@ -1,8 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 
-const AppearProfile = keyframes`
+const AppearAnimation = keyframes`
   0% {
     transform: translateY(-24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`
+
+const AppearAnimationBottomToTop = keyframes`
+  0% {
+    transform: translateY(48px);
     opacity: 0;
   }
   100% {
@@ -15,33 +26,29 @@ const ProblemContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.background};
+  width: 100%;
   min-height: 100vh;
-  padding: 120px 100px;
+  padding-top: 110px;
+  align-items: center;
 `
 
 const ContentContainer = styled.div`
-  animation: ${AppearProfile} 1s ease forwards;
+  animation: ${AppearAnimationBottomToTop} 1s ease forwards;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-`
-
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`
-
-const ContentTitle = styled.div`
-  color: ${(props) => props.theme.contentText};
-  font-size: 40px;
-  font-weight: bold;
+  flex-direction: row;
+  gap: 32px;
+  width: calc(100vw - 80px);
 `
 
 const ProblemList = styled.div`
+  animation: ${AppearAnimationBottomToTop} 1s ease forwards;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  background-color: ${(props) => props.theme.foreground};
+  border-radius: 16px;
+  overflow-y: scroll;
+  height: 75vh;
 `
 
 const ProblemItem = styled.div`
@@ -51,13 +58,16 @@ const ProblemItem = styled.div`
   justify-content: space-between;
   background-color: ${(props) => props.theme.foreground};
   padding: 24px;
-  border-radius: 16px;
+  border-bottom: 1px solid #00000018;
+  &:last-child {
+    border-bottom: 1px solid #00000000;
+  }
 `
 
 const ProblemInfoWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 `
 
 const ProblemName = styled.div`
@@ -86,14 +96,11 @@ const ProblemTags = styled.div`
 
 const ProblemTag = styled.div`
   display: flex;
-  border: 1px solid ${(props) => props.theme.primary};
-  border-radius: 12px;
-  padding: 4px 8px;
   gap: 4px;
 `
 
 const ProblemTagText = styled.div`
-  color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.secondary};
   font-size: 12px;
   font-weight: 500;
 `
@@ -148,4 +155,63 @@ const ProblemRightWrap = styled.div`
   gap: 8px;
 `
 
-export { ProblemContainer, ContentContainer, ContentWrapper, ContentTitle, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemRightWrap, ProblemButton };
+const WeekList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
+const WeekItem = styled.div`
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  background-color: ${(props) => props.theme.foreground};
+  border-radius: 16px;
+  cursor: pointer;
+  gap: 4px;
+  &:hover {
+    filter: brightness(0.9);
+  }
+  &:active {
+    transition: all 0.05s;
+    filter: brightness(0.8);
+    transform: scale(0.95);
+  }
+  ${(props) => props.isActive && `
+    background-color: ${props.theme.primary};
+    color: #ffffff;
+    &:hover {
+      filter: brightness(1);
+    }
+    &:active {
+      filter: brightness(1);
+      transform: scale(1);
+    }
+  `}
+`
+
+const WeekTitle = styled.div`
+  color: ${(props) => props.theme.primary};
+  font-size: 10px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 1px solid ${(props) => props.theme.primary};
+  border-radius: 48px;
+  ${(props) => props.isActive && `
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  `}
+`
+
+const AlgorithmName = styled.div`
+  color: ${(props) => props.theme.titleText};
+  font-size: 16px;
+  font-weight: 500;
+  ${(props) => props.isActive && `
+    color: #ffffff;
+  `}
+`
+
+export { ProblemContainer, ContentContainer, ProblemList, ProblemItem, ProblemInfoWrap, ProblemName, ProblemDifficulty, ProblemTags, ProblemTag, ProblemTagText, ProblemCorrect, ProblemCorrectNum, ProblemRightWrap, ProblemButton, WeekList, WeekItem, WeekTitle, AlgorithmName };
