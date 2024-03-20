@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 const ListModalContainer = styled.div`
-position: relative;
   min-width: 400px;
   min-height: 480px;
   z-index: 300;
