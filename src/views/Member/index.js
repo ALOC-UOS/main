@@ -138,7 +138,10 @@ const Member = () => {
               <MemberInfoRow>
                 <MemberInfoItem>해결하지 못한 문제 수</MemberInfoItem>
                 <MemberInfoItem blue={true} onClick={() => openProblemListModal('unsolved', member.githubId)}>
-                  {member.unsolved}개
+                  {member.thisWeekUnsolved === 0 ?
+                      `${member.unsolved}개` :
+                      `${member.thisWeekUnsolved}개 / ${member.unsolved}개`
+                  }
                 </MemberInfoItem>
               </MemberInfoRow>
             </MemberInfoWrapper>
