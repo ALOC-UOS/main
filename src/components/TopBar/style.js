@@ -14,15 +14,15 @@ const TopBarContainer = styled('div')`
   padding: 16px 24px;
   margin: 0 40px;
   border-radius: 16px;
-  background-color: ${(props) => props.theme.foreground}a0;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: ${(props) => props.theme.foreground}d0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
 
   ${(props) => props.isScroll && css`
     top: 0;
     margin: 0;
-    padding: 24px 64px;
+    padding: 16px 64px;
     border-radius: 0px;
   `}
   @media (max-width: 480px) {
