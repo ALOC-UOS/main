@@ -82,13 +82,8 @@ const ProfileWrapper = styled.div`
 
 const ProfileBackgroundImage = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #3C414C;
-  height: 220px;
-  overflow: hidden;
+  background-color: ${(props) => props.theme.foreground};
+  height: 120px;
 
   ${(props) => props.solved && css`
     background-color: ${(props) => props.theme.primary};
@@ -97,27 +92,27 @@ const ProfileBackgroundImage = styled.div`
 `
 
 const ProfileLink = styled.a`
-  transform: translateX(-40px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  width: 160px;
-  height: 160px;
+  position: absolute;
+  left: 24px;
+  bottom: -64px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
-  box-shadow: 0 0 16px #ffffff40;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   &::after {
-    position: absolute;
     transition: all 0.3s ease;
     content: "Github 보기";
     color: #ffffff;
     opacity: 0;
   }
   &:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &::after {
+      position: absolute;
       opacity: 1;
     }
     & > img {
@@ -135,28 +130,12 @@ const ProfileLink = styled.a`
 
 const ProfileImage = styled.img`
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
 `
-
-const ProfileBlurImage = styled.img`
-  animation: ${rotate360} 12s linear infinite;
-  transform-origin: top left;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 480px;
-  height: 378px;
-  filter: blur(64px);
-  &:hover {
-    filter: blur(80px) brightness(1.3);
-    scale: 1.2;
-  }
-`
-
 const ProfileRankWrap = styled.a`
   position: absolute;
-  top: 0;
+  top: 100%;
   right: 16px;
   width: 56px;
   height: 72px;
@@ -197,15 +176,13 @@ const ProfileNumber = styled.img`
 `
 
 const MemberWrapper = styled.div`
-  position: relative;
   background-color: #ffffff;
-  padding: 12px 12px 24px 12px;
+  padding: 80px 12px 24px 12px;
 `
 
 const MemberName = styled.div`
   color: ${(props) => props.theme.titleText};
   font-size: 24px;
-  font-weight: 500;
   margin-left: 12px;
 `
 
@@ -231,26 +208,21 @@ const MemberUserInfoBar = styled.div`
 `
 
 const MemberUserInfoCoin = styled.div`
-  z-index: 1;
-  position: absolute;
-  top: 16px;
-  right: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
 
   color: #ffb800;
   font-size: 16px;
   font-weight: 500;
   gap: 4px;
-  opacity: 0.25;
-  user-select: none;
   & > img {
     width: 24px;
     height: 24px;
   }
   &:hover {
-    opacity: 1;
     & > img {
       transform: rotateY(180deg);
     }
@@ -352,4 +324,4 @@ const Icon = styled.img`
   `}
 `
 
-export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileBlurImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberUserInfoCoin, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation, IconWrapper, Icon };
+export { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundImage, ProfileLink, ProfileImage, ProfileRankWrap, ProfileRank, ProfileNumber, MemberWrapper, MemberName, MemberUserInfoWrapper, MemberUserInfoText, MemberUserInfoBar, MemberUserInfoCoin, MemberBar, MemberInfoWrapper, MemberInfoRow, MemberInfoItem, SolvedAnimation, IconWrapper, Icon };
