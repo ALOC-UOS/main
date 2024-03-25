@@ -97,7 +97,6 @@ const ProfileBackgroundImage = styled.div`
 `
 
 const ProfileLink = styled.a`
-  transform: translateX(-40px);
   display: flex;
   flex-direction: column;
   align-items: center;
