@@ -6,9 +6,9 @@ const CardContainer = styled.div`
   align-items: flex-start;
   gap: 24px;
   margin-top: 24px;
-  width: calc(100vw - 80px);
+  width: calc(100% - 80px);
   @media (max-width: 480px) {
-    width: calc(100vw - 32px);
+    width: calc(100% - 32px);
     flex-direction: column;
   }
 `

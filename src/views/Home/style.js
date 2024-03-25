@@ -47,10 +47,12 @@ const AppearBackground = keyframes`
 
 const BrightenBackground = keyframes`
   0% {
-    filter: brightness(1) hue-rotate(0deg);
+    filter: brightness(1) hue-rotate(0deg) blur(0px);
+    transform: scale(1);
   }
   100% {
-    filter: brightness(0.8) hue-rotate(20deg);
+    filter: brightness(0.8) hue-rotate(20deg) blur(2px);
+    transform: scale(1.05);
   }
 `
 
@@ -84,12 +86,12 @@ const ProblemContainer = styled.div`
   display: flex;
   justify-content: center;
   border-radius: 16px;
-  width: calc(100vw - 80px);
-  height: 483px;
+  width: calc(100% - 80px);
+  height: 560px;
   overflow: hidden;
   background-color: #121314;
   @media (max-width: 480px) {
-    width: calc(100vw - 32px);
+    width: calc(100% - 32px);
   }
 `
 

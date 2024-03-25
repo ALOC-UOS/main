@@ -7,6 +7,35 @@ import MemberPlusIcon from '../../../assets/member-plus-icon.svg';
 const HistoryList= () => {
   const HistoryData = [
     {
+      subscription: '2024년 3월 26일 화요일',
+      contents: [
+        {
+          Icon: MemberPlusIcon,
+          Name: '나윤서'
+        },
+      ]
+    },
+    {
+      subscription: '2024년 3월 25일 월요일',
+      contents: [
+        {
+          Icon: MemberDotIcon,
+          Name: '이강민',
+          Tier: '골드 IV'
+        }
+      ]
+    },
+    {
+      subscription: '2024년 3월 23일 토요일',
+      contents: [
+        {
+          Icon: MemberDotIcon,
+          Name: '박주영',
+          Tier: '브론즈 III'
+        }
+      ]
+    },
+    {
       subscription: '2024년 3월 20일 수요일',
       contents: [
         {
