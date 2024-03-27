@@ -66,9 +66,12 @@ const ProfileWrapper = styled.div`
   border-radius: 24px;
   overflow: hidden;
   min-width: 260px;
-  width: calc((100% - 200px) / 5);
+  width: calc((100% - 240px) / 6);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  @media (max-width: 1840px) {
+    width: calc((100% - 200px) / 5);
+  }
   @media (max-width: 1540px) {
     width: calc((100% - 160px) / 4);
   }
