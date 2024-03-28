@@ -4,6 +4,7 @@ import { MemberContainer, ContentContainer, ProfileWrapper, ProfileBackgroundIma
 import TopBar from '../../components/TopBar';
 import ListModal from '../../components/ListModal';
 import BlackScreen from '../../components/BlackScreen';
+import DecorationCharacter from '../../components/Decorations/Character';
 import Bronze from '../../assets/bronze.png';
 import Silver from '../../assets/silver.png';
 import Gold from '../../assets/gold.png';
@@ -116,6 +117,7 @@ const Member = () => {
               {member.coin}
             </MemberUserInfoCoin>
             <ProfileBackgroundImage solved={member.todaySolved}>
+              {member.username === '이종우' && <DecorationCharacter type="turtle" isShow={member.username === '이종우'} />}
               <SolvedAnimation solved={member.todaySolved} delay={index * 0.25} />
               {!member.todaySolved && <ProfileBlurImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />}
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
