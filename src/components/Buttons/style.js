@@ -7,7 +7,7 @@ const Button = styled.button`
 
   min-width: 140px;
   width: 100%;
-  padding: 20px 0;
+  padding: 16px 0;
   background-color: ${(props) => props.theme.foreground};
 
   border: none;
