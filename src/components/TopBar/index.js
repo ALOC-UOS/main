@@ -16,6 +16,10 @@ const TopBarItems = [
     name: '구성원',
     route: '/member',
   },
+  {
+    name: '상점',
+    route: '/shop',
+  },
 ];
 
 const TopBar = ({ active }) => {
@@ -30,6 +34,8 @@ const TopBar = ({ active }) => {
       setSelectedItem('/problem');
     } else if (path === '/main/member/' || path === '/main/member') {
       setSelectedItem('/member');
+    } else if (path === '/main/shop/' || path === '/main/shop') {
+      setSelectedItem('/shop');
     }
   }, []);
 
