@@ -66,20 +66,21 @@ const ProfileWrapper = styled.div`
   border-radius: 24px;
   overflow: hidden;
   min-width: 260px;
-  width: calc((100% - 240px) / 6);
+  width: calc(100% / 6 - 40px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  // 1840 = 300(260 + 40) * 6 + 40
   @media (max-width: 1840px) {
-    width: calc((100% - 200px) / 5);
+    width: calc(100% / 5 - 40px);
   }
   @media (max-width: 1540px) {
-    width: calc((100% - 160px) / 4);
+    width: calc(100% / 4 - 40px);
   }
   @media (max-width: 1240px) {
-    width: calc((100% - 120px) / 3);
+    width: calc(100% / 3 - 40px);
   }
   @media (max-width: 940px) {
-    width: calc((100% - 80px) / 2);
+    width: calc(100% / 2 - 40px);
   }
 `
 
