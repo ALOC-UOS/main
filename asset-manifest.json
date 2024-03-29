@@ -1,9 +1,17 @@
 {
   "files": {
     "main.css": "/main/static/css/main.f79b8178.css",
-    "main.js": "/main/static/js/main.2ec0adcd.js",
+    "main.js": "/main/static/js/main.eb7098df.js",
     "static/js/787.c84de078.chunk.js": "/main/static/js/787.c84de078.chunk.js",
     "static/media/background.png": "/main/static/media/background.4e10119ee96957044f41.png",
+    "static/media/green-turtle-1.svg": "/main/static/media/green-turtle-1.2c55a6a00c67a49a8a89d7eb2c3b2377.svg",
+    "static/media/green-turtle-2.svg": "/main/static/media/green-turtle-2.ab63b6b11b54069da190e0f7acbd4bab.svg",
+    "static/media/pink-turtle-1.svg": "/main/static/media/pink-turtle-1.0dd1bbc32754ee54cd07a84282688a9c.svg",
+    "static/media/pink-turtle-2.svg": "/main/static/media/pink-turtle-2.160b86eda96072a45d8d5a09a78375ac.svg",
+    "static/media/green-turtle-3.svg": "/main/static/media/green-turtle-3.b41b202dfdfbb49c7b0c5bc6c3be572d.svg",
+    "static/media/pink-turtle-3.svg": "/main/static/media/pink-turtle-3.fa61992fd0636ae4766ed24139a9720c.svg",
+    "static/media/green-turtle-4.svg": "/main/static/media/green-turtle-4.0c7aa5bcfbc798de63ff3f7d8bd30fc7.svg",
+    "static/media/pink-turtle-4.svg": "/main/static/media/pink-turtle-4.bb2fa721fe80cf1f16323e91af0198f7.svg",
     "static/media/platinum.png": "/main/static/media/platinum.48f2fca82343ab04fe00.png",
     "static/media/gold.png": "/main/static/media/gold.6c94e517907f58fbc9da.png",
     "static/media/wave-3.svg": "/main/static/media/wave-3.63d78f250e82938043ea1f4a22f42aa3.svg",
@@ -12,14 +20,6 @@
     "static/media/coin-icon.svg": "/main/static/media/coin-icon.87345e6fdced4852bdacc9ed2c8bf6fd.svg",
     "index.html": "/main/index.html",
     "static/media/all-solve-icon.svg": "/main/static/media/all-solve-icon.cfcbe86495950d4429ba1aff4e46b5c9.svg",
-    "static/media/green-turtle-1.svg": "/main/static/media/green-turtle-1.4fcbe29aeb5b195095f412540033ab18.svg",
-    "static/media/green-turtle-2.svg": "/main/static/media/green-turtle-2.fbd5d5e6f0ba9db8a11f5ab379d06810.svg",
-    "static/media/pink-turtle-1.svg": "/main/static/media/pink-turtle-1.fb06649b5ed67d2ee60542e4bdd0cf8d.svg",
-    "static/media/pink-turtle-2.svg": "/main/static/media/pink-turtle-2.b28bccc298d8454e4c0f4b5323a6863e.svg",
-    "static/media/green-turtle-3.svg": "/main/static/media/green-turtle-3.476d9c2a992e6c9d92f40d7ab77cebb9.svg",
-    "static/media/pink-turtle-3.svg": "/main/static/media/pink-turtle-3.2b845cc965121fddfc5b8bf8e55f67c8.svg",
-    "static/media/green-turtle-4.svg": "/main/static/media/green-turtle-4.496c014f1820ade34ca799711b17d9b3.svg",
-    "static/media/pink-turtle-4.svg": "/main/static/media/pink-turtle-4.ec4508c0b286509977bd90213f289ff1.svg",
     "static/media/location-icon.svg": "/main/static/media/location-icon.7f43e8e9ed3eaacef6be3252b6a8239a.svg",
     "static/media/default-profile.svg": "/main/static/media/default-profile.837d259014e793e5a1ffd66eb831691d.svg",
     "static/media/close-button.svg": "/main/static/media/close-button.fd84b5e455ba8d5bf6fa6aa3f13edfa1.svg",
@@ -38,11 +38,11 @@
     "static/media/number-1.svg": "/main/static/media/number-1.8f31614bc594c7b1e135d6a69313946c.svg",
     "static/media/number-5.svg": "/main/static/media/number-5.42ff17291e441a119bf52fbe491d9a18.svg",
     "main.f79b8178.css.map": "/main/static/css/main.f79b8178.css.map",
-    "main.2ec0adcd.js.map": "/main/static/js/main.2ec0adcd.js.map",
+    "main.eb7098df.js.map": "/main/static/js/main.eb7098df.js.map",
     "787.c84de078.chunk.js.map": "/main/static/js/787.c84de078.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f79b8178.css",
-    "static/js/main.2ec0adcd.js"
+    "static/js/main.eb7098df.js"
   ]
 }
