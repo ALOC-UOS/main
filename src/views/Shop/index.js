@@ -12,19 +12,19 @@ const Shop = () => {
     {
       name: '초록 거북이',
       description: '귀여운 거북이가 엉금엉금 기어오릅니다.',
-      price: '1000',
+      price: '1,000',
       type: 'GreenTurtle',
     },
     {
       name: '분홍 거북이',
       description: '귀여운 거북이가 엉금엉금 기어오릅니다.',
-      price: '1000',
+      price: '1,000',
       type: 'PinkTurtle',
     },
     {
       name: '파랑 파도',
       description: '바다로 떠나고 싶어지네요.',
-      price: '1500',
+      price: '1,500',
       type: 'Wave',
     },
   ]
