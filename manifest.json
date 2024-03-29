@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ALOC",
+  "name": "컴퓨터과학부를 위한 알고리즘 스터디 사이트",
   "icons": [
     {
       "src": "favicon.ico",
