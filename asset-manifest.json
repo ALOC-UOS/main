@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/main/static/css/main.f79b8178.css",
-    "main.js": "/main/static/js/main.258db8ce.js",
+    "main.js": "/main/static/js/main.3ac125f6.js",
     "static/js/787.c84de078.chunk.js": "/main/static/js/787.c84de078.chunk.js",
     "static/media/background.png": "/main/static/media/background.4e10119ee96957044f41.png",
     "static/media/green-turtle-1.svg": "/main/static/media/green-turtle-1.7db0175880258b1ac4cedce88e404fe3.svg",
@@ -38,11 +38,11 @@
     "static/media/number-1.svg": "/main/static/media/number-1.8f31614bc594c7b1e135d6a69313946c.svg",
     "static/media/number-5.svg": "/main/static/media/number-5.42ff17291e441a119bf52fbe491d9a18.svg",
     "main.f79b8178.css.map": "/main/static/css/main.f79b8178.css.map",
-    "main.258db8ce.js.map": "/main/static/js/main.258db8ce.js.map",
+    "main.3ac125f6.js.map": "/main/static/js/main.3ac125f6.js.map",
     "787.c84de078.chunk.js.map": "/main/static/js/787.c84de078.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f79b8178.css",
-    "static/js/main.258db8ce.js"
+    "static/js/main.3ac125f6.js"
   ]
 }
