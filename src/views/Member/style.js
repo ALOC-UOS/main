@@ -94,10 +94,20 @@ const ProfileBackgroundImage = styled.div`
   height: 220px;
   overflow: hidden;
 
-  ${(props) => props.solved && css`
-    background-color: ${(props) => props.color};
+  ${(props) => props.solved &&
+  props.category === 'common' && css`
+    background-color: ${(props) => props.color1};
   `}
 
+  ${(props) => props.solved &&
+  props.category === 'rare' && css`
+    background-image: linear-gradient(${props.degree}deg, ${props.color1} 0%, ${props.color2} 100%);
+  `}
+
+  ${(props) => props.solved &&
+  props.category === 'special' && css`
+    background-image: linear-gradient(${props.degree}deg, ${props.color1} 0%, ${props.color2} 50%, ${props.color3} 100%);
+  `}
 `
 
 const ProfileLink = styled.a`
