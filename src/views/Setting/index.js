@@ -124,6 +124,21 @@ const memberAddList = [
   }
 ]
 
+const colorAddList = [
+  {
+    id: 'id',
+    placeholder: 'Name'
+  },
+  {
+    id: 'color',
+    placeholder: 'Color'
+  },
+  {
+    id: 'category',
+    placeholder: 'Category'
+  }
+]
+
 const Setting = () => {
 
   return (
@@ -138,6 +153,11 @@ const Setting = () => {
         label={'멤버 추가하기'}
         apiURL={'add/user'}
         inputList={memberAddList}
+      />
+      <TextInputWrap
+        label={'색상 추가하기'}
+        apiURL={'add/color'}
+        inputList={colorAddList}
       />
     </SettingContainer>
   );
