@@ -95,7 +95,7 @@ const ProfileBackgroundImage = styled.div`
   overflow: hidden;
 
   ${(props) => props.solved && css`
-    background-color: ${(props) => props.theme.primary};
+    background-color: ${(props) => props.color};
   `}
 
 `

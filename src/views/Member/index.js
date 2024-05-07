@@ -116,7 +116,7 @@ const Member = () => {
               <img src={CoinIcon} />
               {member.coin}
             </MemberUserInfoCoin>
-            <ProfileBackgroundImage solved={member.todaySolved}>
+            <ProfileBackgroundImage solved={member.todaySolved} color={member.profileColor}>
               <SolvedAnimation solved={member.todaySolved} delay={index * 0.25} />
               {!member.todaySolved && <ProfileBlurImage src={`https://avatars.githubusercontent.com/u/${member.profileNumber}?v=4`} />}
               <ProfileLink href={`https://github.com/${member.githubId}`} target="_blank">
