@@ -1,15 +1,13 @@
-![background](https://github.com/O-TRIALANDERROR/main/assets/43953794/16eff186-7931-4d4b-bcfa-da6a60061692)
+![background](https://github.com/ALOC-UOS/main/assets/43953794/0e3aea09-2a40-46f5-8489-fc829604f042)
 
-
-
-## 🎓 씨플(C-People)
+## 🎓 ALOC
 
 > 서울시립대학교 컴퓨터과학부 학생들을 위한 알고리즘 스터디 사이트입니다.
 
 
 <br/>
 
-### ✏️ *“씨플 운영진이 선정한 12주차의 알고리즘”* <br/>
+### ✏️ *“알록 운영진이 선정한 12주차의 알고리즘”* <br/>
 매주마다 새로운 알고리즘으로 변경되는 문제들을 만나보세요!
 
 <br/>
@@ -21,7 +19,7 @@
 <br/>
 
 ## 👀 Preview
-### [🌐 WebSite](https://o-trialanderror.github.io/main)
+### [🌐 WebSite](https://aloc-uos.github.io/main)
 
 <br/>
 <br/>
@@ -40,6 +38,7 @@
 |<img src='https://avatars.githubusercontent.com/u/81405795?v=4' width="100" /> |[조종빈](https://github.com/jongbin26)|20학번|2024/03/04|
 |<img src='https://avatars.githubusercontent.com/u/81704465?v=4' width="100" /> |[정다현](https://github.com/bronging)|21학번|2024/03/07|
 |<img src='https://avatars.githubusercontent.com/u/96644508?v=4' width="100" /> |[박주영](https://github.com/parkjuyeong0312)|21학번|2024/03/08|
+|<img src='https://avatars.githubusercontent.com/u/155700091?v=4' width="100" /> |나윤서|21학번|2024/03/26|
 
 <br/>
 <br/>
