@@ -41,16 +41,14 @@ function App() {
   };
   return (
     <ThemeProvider theme={themeObject[theme]}>
-      <Router basename={process.env.PUBLIC_URL}> 
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/problem" element={<Problem />} />
-            <Route path="/member" element={<Member />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/battle" element={<Battle />} />
-            <Route path="/setting" element={<Setting />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/problem" element={<Problem />} />
+          <Route path="/member" element={<Member />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/battle" element={<Battle />} />
+          <Route path="/setting" element={<Setting />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://aloc-uos.github.io/main",
+  "homepage": "https://aloc.kr",
   "name": "ALOC",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "echo aloc.kr > build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
