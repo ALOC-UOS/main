@@ -19,7 +19,7 @@
 <br/>
 
 ## 👀 Preview
-### [🌐 WebSite](https://aloc-uos.github.io/main)
+### [🌐 WebSite](https://aloc.kr)
 
 <br/>
 <br/>
