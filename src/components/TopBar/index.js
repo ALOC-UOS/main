@@ -28,13 +28,13 @@ const TopBar = ({ active }) => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    if( path === '/main/' || path === '/main') {
+    if( path === '/') {
       setSelectedItem('/');
-    } else if (path === '/main/problem/' || path === '/main/problem') {
+    } else if (path === '/problem/' || path === '/problem') {
       setSelectedItem('/problem');
-    } else if (path === '/main/member/' || path === '/main/member') {
+    } else if (path === '/member/' || path === '/member') {
       setSelectedItem('/member');
-    } else if (path === '/main/shop/' || path === '/main/shop') {
+    } else if (path === '/shop/' || path === '/shop') {
       setSelectedItem('/shop');
     }
   }, []);
