@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { HomeContainer, ContentContainer, ProblemContainer, ProblemWrapper, ProblemTitleWrapper, ProblemTitle, ProblemDifficulty, ProblemName, ProblemButton, BackgroundImage, ProblemTags, ProblemTag, ProblemTagText, SolveMemberContainer, MemberWrapper, ProfileImage, Description, MemberName, SolveTime } from './style';
 import TopBar from '../../components/TopBar';
-import ProblemBackgroundImage from '../../assets/background.png';
+import ProblemBackgroundImage from '../../assets/background1.png';
 import RightArrowIcon from '../../assets/right-arrow-icon.svg';
 import Bronze from '../../assets/bronze-small.png';
 import Silver from '../../assets/silver-small.png';
