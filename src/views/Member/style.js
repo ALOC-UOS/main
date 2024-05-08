@@ -94,6 +94,11 @@ const ProfileBackgroundImage = styled.div`
   height: 220px;
   overflow: hidden;
 
+  ${(props) => props.solved && css`
+    &:hover {
+      filter: brightness(1.2);
+    }
+  `}
   ${(props) => props.solved &&
   props.category === 'common' && css`
     background-color: ${(props) => props.color1};
@@ -258,6 +263,10 @@ const MemberUserInfoCoin = styled.div`
   gap: 4px;
   opacity: 0.25;
   user-select: none;
+
+  padding: 4px 8px;
+  background-color: #00000080;
+  border-radius: 24px;
   & > img {
     width: 24px;
     height: 24px;

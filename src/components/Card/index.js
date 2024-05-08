@@ -12,11 +12,11 @@ const Card = () => {
       contents: [
         {
           Icon: CalendarIcon,
-          Text: '3월 26일 화요일, 오후 7시'
+          Text: '5월 6일 화요일, 오후 7시'
         },
         {
           Icon: LocationIcon,
-          Text: '정보기술관 107호'
+          Text: '정보기술관 106호 / 107호'
         }
       ]
     },
@@ -37,7 +37,7 @@ const Card = () => {
         <CardTop>
           <CardLabel> 예정된 일정 </CardLabel>
           <CardTitle>
-            정기 세미나 - 5회차
+            정기 세미나 - 9회차
           </CardTitle>
         </CardTop>
         {SeminarData.map((data, index) => {

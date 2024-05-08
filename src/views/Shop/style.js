@@ -62,6 +62,7 @@ const ItemImgWrapper = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 240px;
+  min-height: 176px;
   padding: 24px;
   background-color: ${(props) => props.theme.foreground};
 `
